@@ -1,0 +1,33 @@
+button {
+	border: none;
+	transition: all 0.4s ease;
+	&:hover {
+		cursor: pointer;
+		transition: all 0.4s ease;
+	}
+}
+a {
+	text-transform: uppercase;
+}
+a.cta {
+	font-family: $header-fonts;
+	color: white;
+	background: $brand-primary;
+	text-transform: uppercase;
+	padding: 20px 40px;
+	&--primary {
+		border: 1px solid $brand-primary;
+	}
+	&--secondary {
+		background: transparent;
+		color: $white;
+		border: 1px solid $white;
+
+	}
+}
+.call-to-actions {
+	a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}

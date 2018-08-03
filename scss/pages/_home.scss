@@ -1,0 +1,95 @@
+html,body {
+	height: 100%;
+	width: 100%;
+	background: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-stroke: 0.45px;
+	// or
+	-webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
+	// or
+	// text-shadow: #fff 0px 1px 1px;
+
+}
+
+.typo--label {
+	display: block;
+	font-family: $font-family;
+	margin-bottom: 20px;
+}
+.typo--element {
+	padding: 20px 0;
+	margin-bottom: 40px;
+	border-bottom: 1px solid rgba($black--light, 0.1);
+	&-large {
+		padding: 60px 0;
+		h1 {
+			margin-bottom: 50px;
+		}
+		p {
+			margin-bottom: 100px;
+		}
+	}
+}
+.typo--component {
+	padding: 40px 0;
+}
+
+
+#hero {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	background: $black;
+	.container {
+		z-index: 2;
+	}
+	h1, p.p1 {
+		color: white;
+		text-align: center;
+		margin: 0 auto;
+	}
+	h1 {
+		margin-bottom: 20px;
+	}
+	p {
+		margin-bottom: 40px;
+	}
+	.actions	{
+		margin-top: 40px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		a {
+			margin-right: 20px;
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+	&:after {
+		content: '';
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		z-index: 1;
+		background: url('/assets/img/home/header--bg.png') no-repeat;
+		background-position: bottom right;
+		background-size: contain;
+	}
+}
+section {
+	padding: 100px 0;
+	h2 {
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+.section {
+	&--hiw {
+		background: #F6F7FD;
+	}
+}
