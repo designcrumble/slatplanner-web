@@ -29,5 +29,16 @@ a.cta {
 	a {
 		padding-top: 10px;
 		padding-bottom: 10px;
+		margin-right: 10px;
+		padding: 10px 25px;
+		letter-spacing: 0.02em;
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+	.cta--primary {
+		background: $marigold;
+		color: $black;
+		border-color: $marigold;
 	}
 }

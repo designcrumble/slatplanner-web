@@ -11,6 +11,8 @@ nav {
 	}
 	a {
 		color: white;
+		font-size: 14px;
+		letter-spacing: 0.05em;
 	}
 	.left {
 		display: flex;
@@ -28,11 +30,12 @@ nav {
 	.right{
 		display: flex;
 		flex: 1;
+		justify-content: flex-end;
 	}
 	.center {
 		display: flex;
 		justify-content: center;
-		flex: 4;
+		flex: 3;
 		ul {
 			li {
 				margin-right: 20px;
