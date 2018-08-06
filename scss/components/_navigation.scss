@@ -46,3 +46,20 @@ nav {
 		}
 	}
 }
+
+.nav {
+	&--mobile {
+		display: flex;
+	}
+	&--desktop {
+		display: none;
+	}
+	@include respond-to('medium') {
+		&--mobile {
+			display: none;
+		}
+		&--desktop {
+			display: flex;
+		}
+	}
+}

@@ -133,6 +133,12 @@ section {
 				color: $black;
 			}
 		}
+		&--desktop {
+			display: none;
+		}
+		&--mobile {
+			display: flex;
+		}
 	}
 	&--testimonial {
 		background: $black;
@@ -160,10 +166,10 @@ section {
 					z-index: -1;
 					background: url(/assets/img/home/icon-quote.svg) no-repeat;
 					background-size: contain;
-					opacity: 0.3;
+					opacity: 0.25;
 					content: '';
-					top: -10px;
-					left: 0px;
+					top: -40px;
+					left: -20px;
 					height: 64px;
 					width: 96px;
 				}
@@ -264,6 +270,16 @@ section {
 			color: $black;
 			background: $white;
 			border-color: $white;
+		}
+	}
+	@include respond-to('medium') {
+		&--hiw {
+			&--desktop {
+				display: flex;
+			}
+			&--mobile {
+				display: none;
+			}
 		}
 	}
 }

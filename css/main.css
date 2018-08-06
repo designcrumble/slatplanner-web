@@ -1209,6 +1209,18 @@ nav {
       nav .center ul li:last-of-type {
         margin-right: 0; }
 
+.nav--mobile {
+  display: flex; }
+
+.nav--desktop {
+  display: none; }
+
+@media (min-width: 768px) {
+  .nav--mobile {
+    display: none; }
+  .nav--desktop {
+    display: flex; } }
+
 html, body {
   height: 100%;
   width: 100%;
@@ -1322,6 +1334,10 @@ section {
       border-color: #FAA916;
       justify-content: center;
       color: #00171F; }
+  .section--hiw--desktop {
+    display: none; }
+  .section--hiw--mobile {
+    display: flex; }
 
 .section--testimonial {
   background: #00171F;
@@ -1347,10 +1363,10 @@ section {
         z-index: -1;
         background: url(/assets/img/home/icon-quote.svg) no-repeat;
         background-size: contain;
-        opacity: 0.3;
+        opacity: 0.25;
         content: '';
-        top: -10px;
-        left: 0px;
+        top: -40px;
+        left: -20px;
         height: 64px;
         width: 96px; }
     .section--testimonial .testimonial .job-title {
@@ -1432,6 +1448,12 @@ section {
     color: #00171F;
     background: #FFFFFF;
     border-color: #FFFFFF; }
+
+@media (min-width: 768px) {
+  .section--hiw--desktop {
+    display: flex; }
+  .section--hiw--mobile {
+    display: none; } }
 
 .works {
   display: flex;
