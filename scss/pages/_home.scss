@@ -44,6 +44,7 @@ body {
 	justify-content: center;
 	height: 100%;
 	width: 100%;
+	max-width: 100%;
 	background: $black;
 	.container {
 		z-index: 2;
@@ -90,6 +91,7 @@ body {
 		width: 100%;
 		position: absolute;
 		z-index: 1;
+		overflow: hidden;
 		background: url('/assets/img/home/header--bg.png') no-repeat;
 		background-position: bottom right;
 		background-size: contain;
@@ -137,7 +139,37 @@ section {
 			display: none;
 		}
 		&--mobile {
-			display: flex;
+			display: block;
+			.works {
+				background: 0;
+				min-height: initial;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 0;
+				margin: 0;
+				.note {
+					margin: 0;
+					max-width: 355px !important;
+					min-width: 300px !important;
+					min-height: initial;
+					max-height: initial;
+				&:nth-of-type(even) {
+					flex-direction: column;
+					.note {
+						margin: 0;
+					}
+					.illustration {
+						margin: 0;
+					}
+				}
+				}
+				.illustration {
+					margin: 0;
+					background: $brand-primary;
+				}
+			}
 		}
 	}
 	&--testimonial {
@@ -275,7 +307,7 @@ section {
 	@include respond-to('medium') {
 		&--hiw {
 			&--desktop {
-				display: flex;
+				display: block;
 			}
 			&--mobile {
 				display: none;
@@ -291,7 +323,6 @@ section {
 	background: $brand-primary;
 	margin-bottom: 120px;
 	.note {
-
 		display: flex;
 		flex-direction: column;
 		min-height: 30%;

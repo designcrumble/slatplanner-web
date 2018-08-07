@@ -50,6 +50,27 @@ nav {
 .nav {
 	&--mobile {
 		display: flex;
+		padding: 20px;
+		.brand {
+			max-width: 150px;
+		}
+		.right {
+			align-items: center;
+		}
+		.actions {
+			a {
+				max-height: 30px;
+				display: flex;
+				padding: 0;
+				justify-content: center;
+				align-items: center;
+				width: 80px;
+				height: 30px;
+			}
+		}
+		.sub-menu {
+			margin-left: 20px;
+		}
 	}
 	&--desktop {
 		display: none;
