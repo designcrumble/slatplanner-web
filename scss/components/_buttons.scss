@@ -7,7 +7,14 @@ button {
 	}
 }
 a {
+	display: inline-block;
 	text-transform: uppercase;
+	overflow: hidden;
+	transition: all 0.2s ease;
+	&:hover {
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
 }
 a.cta {
 	font-family: $header-fonts;
@@ -17,6 +24,27 @@ a.cta {
 	padding: 20px 40px;
 	&--primary {
 		border: 1px solid $brand-primary;
+		position: relative;
+		display: inline-block;
+		overflow: hidden;
+		z-index: 2;
+		overflow: hidden;
+		  &:after {
+		    content: '';
+		    @include absolute(0,0,0,0);
+		    background-color: $black;
+		    transform: translateX(-98%);
+		    z-index: -1;
+		    transition: 0.5s ease-in-out;
+		  }
+		  &:hover {
+		    color: $white;
+			transition: all 0.2s ease;
+		    &:after {
+		      transform: translateX(0);
+		     transition: 0.5s ease-in-out;
+		    }
+		  }
 	}
 	&--secondary {
 		background: transparent;

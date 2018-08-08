@@ -96,16 +96,22 @@ h1 {
 
 h1.hero {
     line-height: normal;
-    font-size: 48px;
+    font-size: 34px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    @include respond-to('medium'){
+        font-size: 48px;
+    }
 }
 .hero--title {
     line-height: normal;
-    font-size: 48px;
+    font-size: 34px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     text-align: center;
+    @include respond-to('medium'){
+        font-size: 48px;
+    }
 }
 h2 {
     font-style: normal;

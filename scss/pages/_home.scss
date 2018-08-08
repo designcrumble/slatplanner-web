@@ -242,6 +242,7 @@ section {
 		.integration-soft {
 			width: 250px;
 			height: 95px;
+			margin: 0 auto;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -287,8 +288,8 @@ section {
 			align-items: center;
 		}
 		h1 {
-			line-height: 74px;
-			font-size: 56px;
+			line-height: 48px;
+			font-size: 34px;
 			text-align: center;
 			letter-spacing: 0.015em;
 			text-transform: uppercase;
@@ -297,11 +298,27 @@ section {
 		}
 		p {
 			margin-bottom: 40px;
+			text-align: center;
+			line-height: 24px;
+			font-size: 16px;
 		}
 		a {
 			color: $black;
 			background: $white;
 			border-color: $white;
+			margin-top: 40px;
+		}
+		@include respond-to('medium') {
+			h1 {
+				font-size: 56px;
+				line-height: 72px;
+				max-width: 940px;
+				margin: 0 auto;
+			}
+			p {
+				font-size: 18px;
+				line-height: 30px;
+			}
 		}
 	}
 	@include respond-to('medium') {

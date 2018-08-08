@@ -146,16 +146,22 @@ h1 {
 
 h1.hero {
   line-height: normal;
-  font-size: 48px;
+  font-size: 34px;
   letter-spacing: 0.02em;
   text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h1.hero {
+      font-size: 48px; } }
 
 .hero--title {
   line-height: normal;
-  font-size: 48px;
+  font-size: 34px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-align: center; }
+  @media (min-width: 768px) {
+    .hero--title {
+      font-size: 48px; } }
 
 h2 {
   font-style: normal;
@@ -365,7 +371,9 @@ img {
 .container-fluid,
 .container {
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  padding-left: 1rem;
+  padding-right: 1rem; }
 
 .container-fluid {
   padding-right: 2rem;
@@ -1176,7 +1184,13 @@ button {
     transition: all 0.4s ease; }
 
 a {
-  text-transform: uppercase; }
+  display: inline-block;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: all 0.2s ease; }
+  a:hover {
+    cursor: pointer;
+    transition: all 0.2s ease; }
 
 a.cta {
   font-family: "Fjalla One", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -1185,7 +1199,29 @@ a.cta {
   text-transform: uppercase;
   padding: 20px 40px; }
   a.cta--primary {
-    border: 1px solid #3D5AFE; }
+    border: 1px solid #3D5AFE;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 2;
+    overflow: hidden; }
+    a.cta--primary:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #00171F;
+      transform: translateX(-98%);
+      z-index: -1;
+      transition: 0.5s ease-in-out; }
+    a.cta--primary:hover {
+      color: #FFFFFF;
+      transition: all 0.2s ease; }
+      a.cta--primary:hover:after {
+        transform: translateX(0);
+        transition: 0.5s ease-in-out; }
   a.cta--secondary {
     background: transparent;
     color: #FFFFFF;
@@ -1473,6 +1509,7 @@ section {
   .section--integrations .integration-soft {
     width: 250px;
     height: 95px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1509,19 +1546,32 @@ section {
     justify-content: center;
     align-items: center; }
   .section--cta h1 {
-    line-height: 74px;
-    font-size: 56px;
+    line-height: 48px;
+    font-size: 34px;
     text-align: center;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     max-width: 100%;
     margin-bottom: 10px; }
   .section--cta p {
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px; }
   .section--cta a {
     color: #00171F;
     background: #FFFFFF;
-    border-color: #FFFFFF; }
+    border-color: #FFFFFF;
+    margin-top: 40px; }
+  @media (min-width: 768px) {
+    .section--cta h1 {
+      font-size: 56px;
+      line-height: 72px;
+      max-width: 940px;
+      margin: 0 auto; }
+    .section--cta p {
+      font-size: 18px;
+      line-height: 30px; } }
 
 @media (min-width: 768px) {
   .section--hiw--desktop {
@@ -1658,3 +1708,98 @@ section {
     right: 0;
     background: linear-gradient(110.12deg, #5972FF 0%, #01A2E1 99.94%);
     transform: rotate(-7.5deg); }
+
+.hero-intro--about {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 5px 15px rgba(57, 71, 107, 0.15);
+  border-radius: 2px;
+  padding: 20px; }
+  .hero-intro--about .body {
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 23, 31, 0.15); }
+    .hero-intro--about .body p {
+      font-weight: 300;
+      line-height: 24px;
+      font-size: 14px;
+      color: #000000;
+      text-align: left; }
+
+.section--team {
+  overflow-x: hidden; }
+  .section--team:after {
+    content: '';
+    display: block;
+    background: linear-gradient(0deg, #F6F9FC, #F6F9FC), linear-gradient(103.77deg, #E3E5FF 2.14%, #EFF9FF 97.38%);
+    transform: skewY(-12deg);
+    transform-origin: 0;
+    position: absolute;
+    z-index: -1;
+    height: 160%;
+    top: 150%;
+    left: 0%;
+    width: 140%;
+    overflow: hidden;
+    max-width: 100%; }
+  .section--team h2 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 23, 31, 0.15);
+    margin-bottom: 60px; }
+  @media (min-width: 768px) {
+    .section--team:after {
+      top: 130%;
+      height: 110%; }
+    .section--team h2 {
+      padding-bottom: 40px; } }
+
+.section--cta a {
+  color: #FFFFFF;
+  background: #00171F;
+  border-color: #00171F;
+  letter-spacing: 0.02em; }
+
+.player {
+  margin-bottom: 40px; }
+  .player .player-body {
+    position: relative; }
+  .player .metadata {
+    width: 90%;
+    padding: 15px;
+    background: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: -28px;
+    left: 10px;
+    box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.05); }
+    .player .metadata .name {
+      font-family: "Fjalla One", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      margin-bottom: 5px; }
+    .player .metadata .role {
+      font-weight: normal;
+      font-size: 12px;
+      color: #000000;
+      opacity: 0.7; }
+  @media (min-width: 768px) {
+    .player .metadata {
+      width: 80%;
+      top: -60px;
+      left: 20px;
+      padding: 15px 20px; }
+      .player .metadata .name {
+        line-height: 38px;
+        font-size: 24px;
+        color: #000000;
+        margin-bottom: 10px; }
+      .player .metadata .role {
+        line-height: 29px;
+        font-size: 14px;
+        color: #000000;
+        opacity: 0.7; } }
