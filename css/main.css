@@ -251,7 +251,7 @@ p.special {
 
 a {
   font-family: "Fjalla One", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #FD6677;
+  color: #3D5AFE;
   text-decoration: none;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -259,7 +259,7 @@ a {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
   a:hover {
-    color: #fc344a; }
+    color: #0a2ffe; }
 
 ul, ol {
   margin: 0; }
@@ -1078,6 +1078,32 @@ header {
   background: #00171F;
   overflow-x: hidden; }
 
+.header--sub-page {
+  height: 530px;
+  padding-top: 100px; }
+
+.header--request-demo {
+  background: linear-gradient(278.6deg, #00171F 12.39%, #180040 100%);
+  transform: skewY(-8deg);
+  transform-origin: 0; }
+  .header--request-demo .container {
+    transform: skewY(8deg);
+    transform-origin: 0; }
+  .header--request-demo #hero {
+    background: none; }
+    .header--request-demo #hero:after {
+      content: '';
+      height: 50%;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      bottom: -120px;
+      right: -100px;
+      overflow: hidden;
+      background: url("/assets/img/header--demo-bg.png") no-repeat;
+      background-position: bottom right;
+      background-size: contain; }
+
 footer {
   background: #00171F; }
   footer .top, footer .middle, footer .bottom {
@@ -1226,6 +1252,29 @@ a.cta {
     background: transparent;
     color: #FFFFFF;
     border: 1px solid #FFFFFF; }
+  a.cta--features {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 2;
+    overflow: hidden; }
+    a.cta--features:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #00171F;
+      transform: translateX(-98%);
+      z-index: -1;
+      transition: 0.5s ease-in-out; }
+    a.cta--features:hover {
+      color: #FFFFFF;
+      transition: all 0.2s ease; }
+      a.cta--features:hover:after {
+        transform: translateX(0);
+        transition: 0.5s ease-in-out; }
 
 .call-to-actions a {
   padding-top: 10px;
@@ -1246,7 +1295,13 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px; }
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #00171F;
+  z-index: 10; }
   nav ul {
     display: flex;
     align-items: center;
@@ -1420,6 +1475,8 @@ section {
       border-color: #FAA916;
       justify-content: center;
       color: #00171F; }
+      .section--hiw .call-to-action a:hover {
+        color: white; }
   .section--hiw--desktop {
     display: none; }
   .section--hiw--mobile {
@@ -1615,7 +1672,29 @@ section {
       width: 240px;
       justify-content: center;
       align-items: center;
-      text-align: center; }
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      z-index: 2;
+      overflow: hidden; }
+      .works .note a:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #00171F;
+        transform: translateX(-98%);
+        z-index: -1;
+        transition: 0.5s ease-in-out; }
+      .works .note a:hover {
+        color: #FFFFFF;
+        transition: all 0.2s ease; }
+        .works .note a:hover:after {
+          transform: translateX(0);
+          transition: 0.5s ease-in-out; }
   .works .illustration {
     display: flex;
     flex-direction: row;
@@ -1708,6 +1787,126 @@ section {
     right: 0;
     background: linear-gradient(110.12deg, #5972FF 0%, #01A2E1 99.94%);
     transform: rotate(-7.5deg); }
+
+.pricing-cards {
+  margin-top: -200px;
+  padding-bottom: 200px; }
+
+.schedule-demo--cta h2 {
+  margin-bottom: 20px; }
+
+.schedule-demo--cta p {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 400px;
+  margin-bottom: 40px; }
+
+.schedule-demo--cta a {
+  color: #3D5AFE;
+  border-color: #00171F; }
+
+.section--pricing-help {
+  background: #FFFFFF;
+  border-top: 1px solid rgba(0, 23, 31, 0.15);
+  padding: 0;
+  padding-top: 100px;
+  padding-bottom: 200px; }
+  .section--pricing-help h2 {
+    margin-bottom: 20px; }
+  .section--pricing-help p {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 400px;
+    margin-bottom: 40px; }
+  .section--pricing-help a {
+    color: #3D5AFE;
+    border-color: #00171F; }
+
+.pricing-card {
+  background: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07), 0px 15px 35px rgba(50, 50, 93, 0.1);
+  border-top: 10px solid #00171F; }
+  .pricing-card .plan-type {
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 23, 31, 0.05); }
+    .pricing-card .plan-type h5 {
+      margin-bottom: 0;
+      font-family: "Poppins", Playfair Display, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: bold;
+      line-height: normal;
+      font-size: 14px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #00171F; }
+  .pricing-card .plan-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px; }
+  .pricing-card .fee {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    .pricing-card .fee h2 {
+      font-weight: normal;
+      line-height: normal;
+      font-size: 48px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #00171F;
+      margin: 40px auto; }
+  .pricing-card ul.features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .pricing-card ul.features li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 20px;
+      font-weight: 500;
+      line-height: normal;
+      font-size: 14px;
+      color: #212121; }
+      .pricing-card ul.features li span {
+        font-weight: 700;
+        margin-right: 5px; }
+      .pricing-card ul.features li img {
+        margin-right: 15px; }
+  .pricing-card .plan-action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    .pricing-card .plan-action a {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      color: white;
+      line-height: normal;
+      font-size: 16px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: #00171F;
+      padding: 30px; }
+  .pricing-card--premium {
+    border-color: #3D5AFE; }
+    .pricing-card--premium .fee h2 {
+      color: #3D5AFE; }
+      .pricing-card--premium .fee h2 span {
+        text-transform: lowercase;
+        color: rgba(0, 23, 31, 0.15);
+        font-size: 32px;
+        margin-left: -5px; }
+    .pricing-card--premium .plan-action a {
+      background: #3D5AFE; }
 
 .hero-intro--about {
   background: white;
@@ -1803,3 +2002,80 @@ section {
         font-size: 14px;
         color: #000000;
         opacity: 0.7; } }
+
+.hbspt-form {
+  background: #FFFFFF;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07), 0px 15px 35px rgba(50, 50, 93, 0.1);
+  border-top: 5px solid #3D5AFE;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px;
+  position: absolute;
+  z-index: 5;
+  top: 450px;
+  left: 0;
+  right: 0; }
+  .hbspt-form label {
+    color: #00171F;
+    margin-bottom: 10px; }
+  .hbspt-form input {
+    background: #F6F9FC;
+    border-radius: 2px; }
+    .hbspt-form input:focus {
+      border-color: #3D5AFE; }
+  .hbspt-form input.hs-input.error, .hbspt-form div.field.error input, .hbspt-form div.field.error textarea, .hbspt-form div.field.error .chzn-choices, .hbspt-form textarea.hs-input.error {
+    border-color: #FC5356 !important; }
+  .hbspt-form .hs-input {
+    background: #F6F9FC; }
+
+/* Inputs in focus (selectors for all inputs when clicked)  */
+.hs-form input[type="text"]:focus,
+.hs-form input[type="password"]:focus,
+.hs-form input[type="datetime"]:focus,
+.hs-form input[type="datetime-local"]:focus,
+.hs-form input[type="date"]:focus,
+.hs-form input[type="month"]:focus,
+.hs-form input[type="time"]:focus,
+.hs-form input[type="week"]:focus,
+.hs-form input[type="number"]:focus,
+.hs-form input[type="email"]:focus,
+.hs-form input[type="url"]:focus,
+.hs-form input[type="search"]:focus,
+.hs-form input[type="tel"]:focus,
+.hs-form input[type="color"]:focus,
+.hs-form input[type="file"]:focus,
+.hs-form textarea:focus,
+.hs-form select:focus {
+  outline: none;
+  border-color: #3D5AFE !important;
+  background: 0;
+  background-color: white; }
+
+.hs-input:focus {
+  outline: none;
+  border-color: #3D5AFE !important;
+  background: 0 !important;
+  background-color: white !important; }
+
+.hs-button {
+  background-color: #3D5AFE;
+  border-color: #3D5AFE; }
+
+.questions {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 23, 31, 0.1);
+  border-radius: 2px;
+  padding: 30px 20px; }
+  .questions .icon {
+    margin-right: 30px; }
+  .questions h3 {
+    text-align: left;
+    margin-bottom: 5px; }
+  .questions p {
+    text-align: left; }
+    .questions p a {
+      font-family: "Poppins", Playfair Display, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      display: inline;
+      text-transform: lowercase;
+      color: #3D5AFE; }

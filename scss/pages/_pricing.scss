@@ -60,3 +60,150 @@
 		transform: rotate(-7.5deg);
 	}
 }
+
+.pricing-cards {
+	margin-top: -200px;
+	padding-bottom: 200px;
+}
+.schedule-demo--cta {
+	h2 {
+		margin-bottom: 20px;
+	}
+	p {
+		text-align: center;
+		margin: 0 auto;
+		max-width: 400px;
+		margin-bottom: 40px;
+	}
+	a {
+
+		color: $brand-primary;
+		border-color: $black;
+	}
+}
+.section--pricing-help {
+	background: $white;
+	border-top: 1px solid rgba($black, 0.15);
+	padding: 0;
+	padding-top: 100px;
+	padding-bottom: 200px;
+	h2 {
+		margin-bottom: 20px;
+	}
+	p {
+		text-align: center;
+		margin: 0 auto;
+		max-width: 400px;
+		margin-bottom: 40px;
+	}
+	a {
+
+		color: $brand-primary;
+		border-color: $black;
+	}
+}
+.pricing-card {
+	background: white;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07), 0px 15px 35px rgba(50, 50, 93, 0.1);
+	border-top: 10px solid $black;
+	.plan-type {
+		padding: 25px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		border-bottom: 1px solid rgba($black, 0.05);
+		h5 {
+			margin-bottom: 0;
+			font-family: $font-family;
+			font-weight: bold;
+			line-height: normal;
+			font-size: 14px;
+			text-align: center;
+			text-transform: uppercase;
+			color: $black;
+		}
+	}
+	.plan-details {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 30px;
+	}
+	.fee {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		h2 {
+			font-weight: normal;
+			line-height: normal;
+			font-size: 48px;
+			text-align: center;
+			letter-spacing: 0.02em;
+			text-transform: uppercase;
+			color: $black;
+			margin: 40px auto;
+		}
+	}
+	ul.features {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		li {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-bottom: 20px;
+			font-weight: 500;
+			line-height: normal;
+			font-size: 14px;
+			color: #212121;
+			span {
+				font-weight: 700;
+				margin-right: 5px;
+			}
+			img {
+				margin-right: 15px;
+			}
+		}
+	}
+	.plan-action {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		a {
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			color: white;
+			line-height: normal;
+			font-size: 16px;
+			text-align: center;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			background: $black;
+			padding: 30px;
+		}
+	}
+	&--premium {
+		border-color: $brand-primary;
+		.fee {
+			h2 {
+				color: $brand-primary;
+				span {
+					text-transform: lowercase;
+					color: rgba($black, 0.15);
+					font-size: 32px;
+					margin-left: -5px;
+				}
+			}
+		}
+		.plan-action {
+			a {
+				background: $brand-primary;
+			}
+		}
+	}
+}

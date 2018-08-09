@@ -133,6 +133,9 @@ section {
 				border-color: $marigold;
 				justify-content: center;
 				color: $black;
+				&:hover {
+					color: white;
+				}
 			}
 		}
 		&--desktop {
@@ -376,6 +379,27 @@ section {
 			justify-content: center;
 			align-items: center;
 			text-align: center;
+			position: relative;
+			display: inline-block;
+			overflow: hidden;
+			z-index: 2;
+			overflow: hidden;
+			&:after {
+				content: '';
+				@include absolute(0,0,0,0);
+				background-color: $black;
+				transform: translateX(-98%);
+				z-index: -1;
+				transition: 0.5s ease-in-out;
+				}
+				&:hover {
+				color: $white;
+				transition: all 0.2s ease;
+				&:after {
+				  transform: translateX(0);
+				 transition: 0.5s ease-in-out;
+				}
+			}
 		}
 	}
 	.illustration {

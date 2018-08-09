@@ -8,3 +8,35 @@ header {
 	background: $black;
 	overflow-x: hidden;
 }
+
+.header {
+	&--sub-page {
+		height: 530px;
+		padding-top: 100px;
+	}
+	&--request-demo {
+		background: linear-gradient(278.6deg, #00171F 12.39%, #180040 100%);
+		transform: skewY(-8deg);
+		transform-origin: 0;
+		.container {
+			transform: skewY(8deg);
+			transform-origin: 0;
+		}
+		#hero {
+			background: none;
+			&:after {
+				content: '';
+				height: 50%;
+				width: 100%;
+				position: absolute;
+				z-index: 1;
+				bottom: -120px;
+				right: -100px;
+				overflow: hidden;
+				background: url('/assets/img/header--demo-bg.png') no-repeat;
+				background-position: bottom right;
+				background-size: contain;
+			}
+		}
+	}
+}

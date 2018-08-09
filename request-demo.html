@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<!-- Metatags-->
+	<meta charset="UTF-8">
+	<meta name="description" content="Slatplanner">
+	<meta name="keywords" content="app, slatplanner">
+	<meta name="author" content="Flexplates">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Slatplanner</title>
+
+	<link rel="icon" href="assets/img/favicon.png" type="image/png">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla:100" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div w3-include-html="partials/nav.html" class="nav--container"></div>
+	<header class="header header--request-demo header--sub-page"	>
+		<div class="hero" id="hero">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<h1 class="hero--title">Schedule A Demo</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="section hubspot-form">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+					<script>
+					  hbspt.forms.create({
+						portalId: "4624696",
+						formId: "a304a903-f3e0-4efd-8456-56690bd438aa"
+					});
+					</script>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section">
+		<div class="container">
+			<div class="row center-xs">
+				<div class="col-xs-10 col-md-6">
+					<div class="questions">
+						<div class="icon">
+							<img src="/assets/img/icons/icon--msg.svg" alt="message">
+						</div>
+						<div class="desc">
+							<h3 class="title">General Communication</h3>
+							<p class="p2">For general queries, including partnerships opportunities, please email <a href="#">daniel@slatplanner.com</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div w3-include-html="partials/footer.html" class="footer--container"></div>
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+	<script>
+	function includeHTML() {
+	  var z, i, elmnt, file, xhttp;
+	  /*loop through a collection of all HTML elements:*/
+	  z = document.getElementsByTagName("*");
+	  for (i = 0; i < z.length; i++) {
+	    elmnt = z[i];
+	    /*search for elements with a certain atrribute:*/
+	    file = elmnt.getAttribute("w3-include-html");
+	    if (file) {
+	      /*make an HTTP request using the attribute value as the file name:*/
+	      xhttp = new XMLHttpRequest();
+	      xhttp.onreadystatechange = function() {
+	        if (this.readyState == 4) {
+	          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+	          if (this.status == 404) {elmnt.innerHTML = "Block not found.";}
+	          /*remove the attribute, and call this function once more:*/
+	          elmnt.removeAttribute("w3-include-html");
+	          includeHTML();
+	        }
+	      } 
+	      xhttp.open("GET", file, true);
+	      xhttp.send();
+	      /*exit the function:*/
+	      return;
+	    }
+	  }
+	}
+	</script>
+	<script>
+	includeHTML();
+	</script>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<script>
+		    $('iframe').contents().find("head")
+		      .append($("<style type='text/css'>  .hs-button {background-color: black; border-color: white;}  </style>"));
+	</script>
+	<script src="/assets/js/scripts.js"></script>
+</body>
+</html>

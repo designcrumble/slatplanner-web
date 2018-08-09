@@ -29,28 +29,51 @@ a.cta {
 		overflow: hidden;
 		z-index: 2;
 		overflow: hidden;
-		  &:after {
-		    content: '';
-		    @include absolute(0,0,0,0);
-		    background-color: $black;
-		    transform: translateX(-98%);
-		    z-index: -1;
-		    transition: 0.5s ease-in-out;
-		  }
-		  &:hover {
-		    color: $white;
+		&:after {
+			content: '';
+			@include absolute(0,0,0,0);
+			background-color: $black;
+			transform: translateX(-98%);
+			z-index: -1;
+			transition: 0.5s ease-in-out;
+			}
+			&:hover {
+			color: $white;
 			transition: all 0.2s ease;
-		    &:after {
-		      transform: translateX(0);
-		     transition: 0.5s ease-in-out;
-		    }
-		  }
+			&:after {
+			  transform: translateX(0);
+			 transition: 0.5s ease-in-out;
+			}
+		}
 	}
 	&--secondary {
 		background: transparent;
 		color: $white;
 		border: 1px solid $white;
 
+	}
+	&--features {
+		position: relative;
+		display: inline-block;
+		overflow: hidden;
+		z-index: 2;
+		overflow: hidden;
+		&:after {
+			content: '';
+			@include absolute(0,0,0,0);
+			background-color: $black;
+			transform: translateX(-98%);
+			z-index: -1;
+			transition: 0.5s ease-in-out;
+			}
+			&:hover {
+			color: $white;
+			transition: all 0.2s ease;
+			&:after {
+			  transform: translateX(0);
+			 transition: 0.5s ease-in-out;
+			}
+		}
 	}
 }
 .call-to-actions {

@@ -16,30 +16,9 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<header class="header header--sub">
+	<div w3-include-html="partials/nav.html" class="nav--container"></div>
+	<header class="header header--sub header--sub-page">
 		<div class="header--sub-container">
-			<nav class="nav">
-				<div class="left">
-					<a href="" class="brand brand--slatplanner">
-						<img src="/assets/img/brand/logo.png" alt="">
-					</a>
-				</div>
-				<div class="center">
-					<ul class="nav-links">
-						<li><a href="#">Why SlatPlanner?</a></li>
-						<li><a href="#">Products</a></li>
-						<li><a href="#">Pricing</a></li>
-						<li><a href="#">Resources</a></li>
-						<li><a href="#">Blog</a></li>
-					</ul>
-				</div>
-				<div class="right">
-					<div class="actions call-to-actions">
-						<a href="#" class="action cta cta--secondary">Log In</a>
-						<a href="#" class="action cta cta--primary">Sign Up</a>
-					</div>
-				</div>
-			</nav>
 			<div class="hero hero--sub" id="hero--sub">
 				<div class="container">
 					<div class="row center-xs">
@@ -67,34 +46,78 @@
 			</div>
 		</div>
 	</header>
-
-	<section class="section section--app">
+	<section class="section section--pricing">
 		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="section--image">
-						<div class="image">
-							<img src="/assets/img/home/accesibility.png" alt="accesibility">
+			<div class="row pricing-cards">
+				<div class="col-xs-12 col-md-6">
+					<div class="pricing-card pricing-card--lite">
+						<div class="plan-type">
+							<h5>Lite Plan</h5>
+						</div>
+						<div class="plan-details">
+							<div class="fee">
+								<h2>Free</h2>
+							</div>
+							<ul class="features">
+								<li><img src="/assets/img/icons/icon--tick.svg" alt="tick"><span>50 Tasks </span> Per Project</li>
+								<li><img src="/assets/img/icons/icon--tick.svg" alt="tick"><span>10 Users </span> Per Project</li>
+								<li><img src="/assets/img/icons/icon--tick.svg" alt="tick"><span>5 Snapshots </span> Per Project</li>
+								<li><img src="/assets/img/icons/icon--tick.svg" alt="tick">PlusDelta Tool</li>
+								<li><img src="/assets/img/icons/icon--tick.svg" alt="tick">QR Scanning</li>
+							</ul>
+						</div>
+						<div class="plan-action">
+							<a href="#">CREATE ACCOUNT</a>
 						</div>
 					</div>
-					<h2>ACCESSIBLE ON ALL DEVICES, EVERYWHERE</h2>
-					<p class="p2 center text-center">We built the SlatPlanner platform in such a way that you don’t need to download the apps.</p>
 				</div>
-				<div class="col-xs-12 app-images">
-					<div class="laptop">
-						<img src="/assets/img/home/laptop.png" alt="">
+
+				<div class="col-xs-12 col-md-6">
+					<div class="pricing-card pricing-card--premium">
+						<div class="plan-type">
+							<h5>Premium Plan</h5>
+						</div>
+						<div class="plan-details">
+							<div class="fee">
+								<h2>$83 <span>/mo</span></h2>
+							</div>
+							<ul class="features">
+								<li><img src="/assets/img/icons/icon--tick.svg" alt="tick"><span>Unlimited Tasks </span> Per Project</li>
+								<li><img src="/assets/img/icons/icon--tick.svg" alt="tick"><span>Unlimited Users </span> Per Project</li>
+								<li><img src="/assets/img/icons/icon--tick.svg" alt="tick"><span>Unlimited Snapshots</span> Per Project</li>
+								<li><img src="/assets/img/icons/icon--tick.svg" alt="tick">Project Backups</li>
+								<li><img src="/assets/img/icons/icon--tick.svg" alt="tick">Customizable Fields</li>
+								<li><img src="/assets/img/icons/icon--tick.svg" alt="tick">Project Exports</li>
+								<li><img src="/assets/img/icons/icon--tick.svg" alt="tick">Plus Delta Tool</li>
+								<li><img src="/assets/img/icons/icon--tick.svg" alt="tick">QR Scanning</li>
+							</ul>
+						</div>
+						<div class="plan-action">
+							<a href="#">Go Premium</a>
+						</div>
 					</div>
-					<div class="phone">
-						<img src="/assets/img/home/phone.png" alt="">
-					</div>
-					<div class="tablet">
-						<img src="/assets/img/home/tablet.png" alt="">
-					</div>
+				</div>
+			</div>
+			<div class="schedule-demo--cta row center-xs">
+				<div class="col-xs-10">
+					<h2>Enterprise</h2>
+					<p class="p2">Need an enterprise plan or have other questions? Contact us via widget in bottom right.</p>
+					<a href="/request-demo.html" class="cta cta--secondary">SCHEDULE A DEMO</a>
 				</div>
 			</div>
 		</div>
 	</section>
-	
+	<section class="section section--pricing-help">
+		<div class="container">
+			<div class="row center-xs">
+				<div class="col-xs-12">
+					<h2>Training and Onboarding</h2>
+					<p class="p2">We’ll come help you get started and provide hands-on training to your team.</p>
+					<a href="#" class="cta cta--secondary">CONTACT US FOR PRICING</a>
+				</div>
+			</div>
+		</div>
+	</section>
 	<section class="section section--cta">
 		<div class="container">
 			<div class="row">
@@ -107,78 +130,40 @@
 		</div>
 	</section>
 
-	<footer class="footer">
-		<div class="container">
-
-			<div class="row top">
-				<div class="left">
-					<a href="" class="brand brand--slatplanner">
-						<img src="/assets/img/brand/logo.png" alt="">
-					</a>
-				</div>
-				<div class="right">
-					<div class="actions call-to-actions">
-						<a href="#" class="action cta cta--secondary">Log In</a>
-						<a href="#" class="action cta cta--primary">Sign Up</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="row middle">
-				<div class="left">
-
-					<div class="links-container">
-						<div class="title">Products</div>
-						<ul class="links">
-							<li><a href="#">Supplies</a></li>
-							<li><a href="#">PlusDelta</a></li>
-							<li><a href="#">TimeTable</a></li>
-						</ul>
-					</div>
-
-					<div class="links-container">
-						<div class="title">ABOUT</div>
-						<ul class="links">
-							<li><a href="#">Pricing</a></li>
-							<li><a href="#">Team</a></li>
-							<li><a href="#">Blog</a></li>
-						</ul>
-					</div>
-
-					<div class="links-container">
-						<div class="title">Support</div>
-						<ul class="links">
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Terms of Service</a></li>
-							<li><a href="#">Schedule a Demo</a></li>
-						</ul>
-					</div>
-
-				</div>
-				<div class="right">
-					<ul class="social">
-						<li><a href="#"><img src="/assets/img/icons/icon--fb.svg" alt="Facebook"></a></li>
-						<li><a href="#"><img src="/assets/img/icons/icon--tw.svg" alt="Twitter"></a></li>
-						<li><a href="#"><img src="/assets/img/icons/icon--ig.svg" alt="Instagram"></a></li>
-						<li><a href="#"><img src="/assets/img/icons/icon--google.svg" alt="Google"></a></li>
-						<li><a href="#"><img src="/assets/img/icons/icon--medium.svg" alt="Medium"></a></li>
-					</ul>
-					<div class="description">
-						<p class="p3">The full benefits of digital planning, without sacrificing the physical, collaborative experience.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row bottom">
-				<div class="left">
-					<p class="p4">Copyright © 2018, slatplanner.com</p>
-				</div>
-				<div class="right">
-					
-				</div>
-			</div>
-
-		</div>
-	</footer>
+	<div w3-include-html="partials/footer.html" class="footer--container"></div>
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+	<script>
+	function includeHTML() {
+	  var z, i, elmnt, file, xhttp;
+	  /*loop through a collection of all HTML elements:*/
+	  z = document.getElementsByTagName("*");
+	  for (i = 0; i < z.length; i++) {
+	    elmnt = z[i];
+	    /*search for elements with a certain atrribute:*/
+	    file = elmnt.getAttribute("w3-include-html");
+	    if (file) {
+	      /*make an HTTP request using the attribute value as the file name:*/
+	      xhttp = new XMLHttpRequest();
+	      xhttp.onreadystatechange = function() {
+	        if (this.readyState == 4) {
+	          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+	          if (this.status == 404) {elmnt.innerHTML = "Block not found.";}
+	          /*remove the attribute, and call this function once more:*/
+	          elmnt.removeAttribute("w3-include-html");
+	          includeHTML();
+	        }
+	      } 
+	      xhttp.open("GET", file, true);
+	      xhttp.send();
+	      /*exit the function:*/
+	      return;
+	    }
+	  }
+	}
+	</script>
+	<script>
+	includeHTML();
+	</script>
 	<script src="/assets/js/scripts.js"></script>
 </body>
 </html>

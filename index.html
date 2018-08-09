@@ -16,8 +16,8 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<header class="header">
-		<div w3-include-html="partials/nav.html" class="nav--container"></div>
+	<div w3-include-html="partials/nav.html" class="nav--container"></div>
+	<header class="header"	>
 		<div class="hero" id="hero">
 			<div class="container">
 				<div class="row">
@@ -126,7 +126,7 @@
 							<div class="content">
 								<h4 class="title">Add and Print Tasks</h4>
 								<p class="p3">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus.</p>
-								<a href="#" class="cta cta--secondary">GET STARTED—It’s free</a>
+								<a href="#" class="cta cta--secondary cta--features">GET STARTED—It’s free</a>
 							</div>
 						</div>
 				</article>
@@ -139,7 +139,7 @@
 							<div class="content">
 								<h4 class="title">Plan Collaboratively</h4>
 								<p class="p3">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus.</p>
-								<a href="#" class="cta cta--secondary">GET STARTED—It’s free</a>
+								<a href="#" class="cta cta--secondary cta--features">GET STARTED—It’s free</a>
 							</div>
 						</div>
 				</article>
@@ -152,7 +152,7 @@
 							<div class="content">
 								<h4 class="title">Scan with Your Phone</h4>
 								<p class="p3">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus.</p>
-								<a href="#" class="cta cta--secondary">GET STARTED—It’s free</a>
+								<a href="#" class="cta cta--secondary cta--features">GET STARTED—It’s free</a>
 								</div>
 						</div>
 				</article>
@@ -165,7 +165,7 @@
 							<div class="content">
 								<h4 class="title">GAIN POWERFUL INSIGHTS</h4>
 								<p class="p3">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus.</p>
-								<a href="#" class="cta cta--secondary">GET STARTED—It’s free</a>
+								<a href="#" class="cta cta--secondary cta--features">GET STARTED—It’s free</a>
 							</div>
 						</div>
 				</article>
@@ -280,79 +280,7 @@
 			</div>
 		</div>
 	</section>
-
-	<footer class="footer">
-		<div class="container">
-
-			<div class="row top">
-				<div class="left">
-					<a href="" class="brand brand--slatplanner">
-						<img src="/assets/img/brand/logo.png" alt="">
-					</a>
-				</div>
-				<div class="right">
-					<div class="actions call-to-actions">
-						<a href="#" class="action cta cta--secondary">Log In</a>
-						<a href="#" class="action cta cta--primary">Sign Up</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="row middle">
-				<div class="left">
-
-					<div class="links-container">
-						<div class="title">Products</div>
-						<ul class="links">
-							<li><a href="#">Supplies</a></li>
-							<li><a href="#">PlusDelta</a></li>
-							<li><a href="#">TimeTable</a></li>
-						</ul>
-					</div>
-
-					<div class="links-container">
-						<div class="title">ABOUT</div>
-						<ul class="links">
-							<li><a href="#">Pricing</a></li>
-							<li><a href="#">Team</a></li>
-							<li><a href="#">Blog</a></li>
-						</ul>
-					</div>
-
-					<div class="links-container">
-						<div class="title">Support</div>
-						<ul class="links">
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Terms of Service</a></li>
-							<li><a href="#">Schedule a Demo</a></li>
-						</ul>
-					</div>
-
-				</div>
-				<div class="right">
-					<ul class="social">
-						<li><a href="#"><img src="/assets/img/icons/icon--fb.svg" alt="Facebook"></a></li>
-						<li><a href="#"><img src="/assets/img/icons/icon--tw.svg" alt="Twitter"></a></li>
-						<li><a href="#"><img src="/assets/img/icons/icon--ig.svg" alt="Instagram"></a></li>
-						<li><a href="#"><img src="/assets/img/icons/icon--google.svg" alt="Google"></a></li>
-						<li><a href="#"><img src="/assets/img/icons/icon--medium.svg" alt="Medium"></a></li>
-					</ul>
-					<div class="description">
-						<p class="p3">The full benefits of digital planning, without sacrificing the physical, collaborative experience.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row bottom">
-				<div class="left">
-					<p class="p4">Copyright © 2018, slatplanner.com</p>
-				</div>
-				<div class="right">
-					
-				</div>
-			</div>
-
-		</div>
-	</footer>
+	<div w3-include-html="partials/footer.html" class="footer--container"></div>
 	<script src="https://www.w3schools.com/lib/w3.js"></script>
 	<script>
 	function includeHTML() {

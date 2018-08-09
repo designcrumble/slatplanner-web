@@ -16,67 +16,27 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<header class="header header--page">
-		<nav class="nav nav--desktop">
-			<div class="left">
-				<a href="" class="brand brand--slatplanner">
-					<img src="/assets/img/brand/logo.png" alt="">
-				</a>
-			</div>
-			<div class="center">
-				<ul class="nav-links">
-					<li><a href="#">Why SlatPlanner?</a></li>
-					<li><a href="#">Products</a></li>
-					<li><a href="#">Pricing</a></li>
-					<li><a href="#">Resources</a></li>
-					<li><a href="#">Blog</a></li>
-				</ul>
-			</div>
-			<div class="right">
-				<div class="actions call-to-actions">
-					<a href="#" class="action cta cta--secondary">Log In</a>
-					<a href="#" class="action cta cta--primary">Sign Up</a>
-				</div>
-			</div>
-		</nav>
-		<nav class="nav nav--mobile">
-			<div class="left">
-				<a href="" class="brand brand--slatplanner">
-					<img src="/assets/img/brand/logo.png" alt="">
-				</a>
-			</div>
-			<div class="right">
-				<div class="actions call-to-actions">
-					<a href="#" class="action cta cta--primary">Sign Up</a>
-				</div>
-				<div class="sub-menu">
-					<svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect width="24" height="2" fill="#C4C4C4"/>
-						<rect width="24" height="2" transform="translate(0 8)" fill="#C4C4C4"/>
-						<rect width="12" height="2" transform="translate(12 16)" fill="#C4C4C4"/>
-					</svg>
-				</div>
-			</div>
-		</nav>
-			<div class="hero hero--sub" id="hero--sub">
-				<div class="container">
-					<div class="row center-xs">
-						<div class="col-xs-12">
-							<h1 class="hero--title">We are digitizing the physical planning process.</h1>
-						</div>
-						<div class="col-xs-11 col-md-8">
-							<div class="hero-intro hero-intro--about">
-								<div class="title">
-									<h2>Mission</h2>
-								</div>
-								<div class="body">
-									<p class="p2">We are real construction professionals who are tired of waiting for software companies to provide the solutions we need. We are innovative planners who seek to better the industry. We have decades of hands-on scheduling experience on large commercial and industrial projects, totalling billions of dollars, and have experienced the barriers to effective planning first hand. </p>
-								</div>
+	<div w3-include-html="partials/nav.html" class="nav--container"></div>
+	<header class="header header--sub header--sub-page">
+		<div class="hero hero--sub hero--sub-page" id="hero--sub">
+			<div class="container">
+				<div class="row center-xs">
+					<div class="col-xs-12">
+						<h1 class="hero--title">We are digitizing the physical planning process.</h1>
+					</div>
+					<div class="col-xs-11 col-md-8">
+						<div class="hero-intro hero-intro--about">
+							<div class="title">
+								<h2>Mission</h2>
+							</div>
+							<div class="body">
+								<p class="p2">We are real construction professionals who are tired of waiting for software companies to provide the solutions we need. We are innovative planners who seek to better the industry. We have decades of hands-on scheduling experience on large commercial and industrial projects, totalling billions of dollars, and have experienced the barriers to effective planning first hand. </p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 	</header>
 	<section class="section section--team">
 		<div class="container">
@@ -184,78 +144,40 @@
 		</div>
 	</section>
 
-	<footer class="footer">
-		<div class="container">
-
-			<div class="row top">
-				<div class="left">
-					<a href="" class="brand brand--slatplanner">
-						<img src="/assets/img/brand/logo.png" alt="">
-					</a>
-				</div>
-				<div class="right">
-					<div class="actions call-to-actions">
-						<a href="#" class="action cta cta--secondary">Log In</a>
-						<a href="#" class="action cta cta--primary">Sign Up</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="row middle">
-				<div class="left">
-
-					<div class="links-container">
-						<div class="title">Products</div>
-						<ul class="links">
-							<li><a href="#">Supplies</a></li>
-							<li><a href="#">PlusDelta</a></li>
-							<li><a href="#">TimeTable</a></li>
-						</ul>
-					</div>
-
-					<div class="links-container">
-						<div class="title">ABOUT</div>
-						<ul class="links">
-							<li><a href="#">Pricing</a></li>
-							<li><a href="#">Team</a></li>
-							<li><a href="#">Blog</a></li>
-						</ul>
-					</div>
-
-					<div class="links-container">
-						<div class="title">Support</div>
-						<ul class="links">
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Terms of Service</a></li>
-							<li><a href="#">Schedule a Demo</a></li>
-						</ul>
-					</div>
-
-				</div>
-				<div class="right">
-					<ul class="social">
-						<li><a href="#"><img src="/assets/img/icons/icon--fb.svg" alt="Facebook"></a></li>
-						<li><a href="#"><img src="/assets/img/icons/icon--tw.svg" alt="Twitter"></a></li>
-						<li><a href="#"><img src="/assets/img/icons/icon--ig.svg" alt="Instagram"></a></li>
-						<li><a href="#"><img src="/assets/img/icons/icon--google.svg" alt="Google"></a></li>
-						<li><a href="#"><img src="/assets/img/icons/icon--medium.svg" alt="Medium"></a></li>
-					</ul>
-					<div class="description">
-						<p class="p3">The full benefits of digital planning, without sacrificing the physical, collaborative experience.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row bottom">
-				<div class="left">
-					<p class="p4">Copyright © 2018, slatplanner.com</p>
-				</div>
-				<div class="right">
-					
-				</div>
-			</div>
-
-		</div>
-	</footer>
+	<div w3-include-html="partials/footer.html" class="footer--container"></div>
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+	<script>
+	function includeHTML() {
+	  var z, i, elmnt, file, xhttp;
+	  /*loop through a collection of all HTML elements:*/
+	  z = document.getElementsByTagName("*");
+	  for (i = 0; i < z.length; i++) {
+	    elmnt = z[i];
+	    /*search for elements with a certain atrribute:*/
+	    file = elmnt.getAttribute("w3-include-html");
+	    if (file) {
+	      /*make an HTTP request using the attribute value as the file name:*/
+	      xhttp = new XMLHttpRequest();
+	      xhttp.onreadystatechange = function() {
+	        if (this.readyState == 4) {
+	          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+	          if (this.status == 404) {elmnt.innerHTML = "Block not found.";}
+	          /*remove the attribute, and call this function once more:*/
+	          elmnt.removeAttribute("w3-include-html");
+	          includeHTML();
+	        }
+	      } 
+	      xhttp.open("GET", file, true);
+	      xhttp.send();
+	      /*exit the function:*/
+	      return;
+	    }
+	  }
+	}
+	</script>
+	<script>
+	includeHTML();
+	</script>
 	<script src="/assets/js/scripts.js"></script>
 </body>
 </html>
