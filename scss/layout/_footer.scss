@@ -42,6 +42,25 @@ footer {
 				display: none;
 			}
 		}
+		@include respond-to('medium') {
+			.right {
+				.call-to-actions {
+					display: flex;
+					align-items: center;
+					a {
+						display: block;
+						height: initial;
+						width: initial;
+						padding: 15px 25px;
+						text-align: center;
+						vertical-align: middle;
+					}
+				}
+				a.cta--secondary {
+					display: flex;
+				}
+			}
+		}
 	}
 	.middle {
 		flex-direction: column;

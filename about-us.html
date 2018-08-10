@@ -18,14 +18,21 @@
 <body>
 	<div w3-include-html="partials/nav.html" class="nav--container"></div>
 	<header class="header header--sub header--sub-page">
-		<div class="hero hero--sub hero--sub-page" id="hero--sub">
+		<div class="hero hero--sub hero--sub-page" id="hero">
 			<div class="container">
 				<div class="row center-xs">
 					<div class="col-xs-12">
 						<h1 class="hero--title">We are digitizing the physical planning process.</h1>
 					</div>
-					<div class="col-xs-11 col-md-8">
-						<div class="hero-intro hero-intro--about">
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="section--intro">
+		<div class="container">
+			<div class="row">
+					<div class="col-xs-offset-1 col-xs-11 col-md-offset-2 col-md-8">
+						<div class="hero-intro hero-intro--content">
 							<div class="title">
 								<h2>Mission</h2>
 							</div>
@@ -34,10 +41,9 @@
 							</div>
 						</div>
 					</div>
-				</div>
 			</div>
 		</div>
-	</header>
+	</section>
 	<section class="section section--team">
 		<div class="container">
 			<div class="row">
@@ -178,6 +184,7 @@
 	<script>
 	includeHTML();
 	</script>
+	<script src="/assets/js/jquery-2.1.1.js"></script>
 	<script src="/assets/js/scripts.js"></script>
 </body>
 </html>

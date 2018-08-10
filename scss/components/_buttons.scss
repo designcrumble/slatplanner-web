@@ -50,7 +50,56 @@ a.cta {
 		background: transparent;
 		color: $white;
 		border: 1px solid $white;
-
+		position: relative;
+		display: inline-block;
+		overflow: hidden;
+		z-index: 2;
+		overflow: hidden;
+		&:after {
+			content: '';
+			@include absolute(0,0,0,0);
+			background-color: $white;
+			transform: translateX(-101%);
+			z-index: -1;
+			transition: 0.5s ease-in-out;
+			}
+			&:hover {
+			color: $black;
+			transition: all 0.2s ease;
+			&:after {
+			  transform: translateX(0);
+			 transition: 0.5s ease-in-out;
+			}
+		}
+		&--inverse {
+			border-color: $black;
+			color: $black;
+		}
+	}
+	&--dark {
+		border: 1px solid $black;
+		position: relative;
+		display: inline-block;
+		overflow: hidden;
+		z-index: 2;
+		overflow: hidden;
+		&:after {
+			content: '';
+			@include absolute(0,0,0,0);
+			background-color: $white;
+			transform: translateX(-101%);
+			z-index: -1;
+			transition: 0.5s ease-in-out;
+			}
+			&:hover {
+			color: $black;
+			border-color: $white;
+			transition: all 0.2s ease;
+			&:after {
+			  transform: translateX(0);
+			 transition: 0.5s ease-in-out;
+			}
+		}
 	}
 	&--features {
 		position: relative;

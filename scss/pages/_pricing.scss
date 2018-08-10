@@ -1,7 +1,4 @@
 .header--sub {
-	min-height: 600px;
-	width: 100%;
-	background: 0;
 	h1,p, label {
 		 margin: 0 auto;
 		 color: white;
@@ -46,23 +43,9 @@
 			}
 		}
 	}
-	&:after {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		width: 190%;
-		height: 90%;
-		top: -25%;
-		bottom: 0;
-		left: -20%;
-		right: 0;
-		background: linear-gradient(110.12deg, #5972FF 0%, #01A2E1 99.94%);
-		transform: rotate(-7.5deg);
-	}
 }
 
 .pricing-cards {
-	margin-top: -200px;
 	padding-bottom: 200px;
 }
 .schedule-demo--cta {
@@ -81,12 +64,16 @@
 		border-color: $black;
 	}
 }
+.section--pricing {
+	padding-top: 0;
+	margin-top: -225px;
+}
 .section--pricing-help {
 	background: $white;
 	border-top: 1px solid rgba($black, 0.15);
 	padding: 0;
 	padding-top: 100px;
-	padding-bottom: 200px;
+	padding-bottom: 100px;
 	h2 {
 		margin-bottom: 20px;
 	}

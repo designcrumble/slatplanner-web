@@ -1,20 +1,20 @@
 header {
 	height: 80%;
-	min-height: 800px;
+	min-height: 700px;
 	width: 100%;
 	background: $black;
-	overflow: hidden;
 	max-width: 100%;
 	background: $black;
+	overflow: hidden;
 	overflow-x: hidden;
 }
 
 .header {
 	&--sub-page {
-		height: 530px;
+		height: 640px;
 		padding-top: 100px;
 	}
-	&--request-demo {
+	&--sub-page {
 		background: linear-gradient(278.6deg, #00171F 12.39%, #180040 100%);
 		transform: skewY(-8deg);
 		transform-origin: 0;
@@ -26,16 +26,18 @@ header {
 			background: none;
 			&:after {
 				content: '';
-				height: 50%;
+				height: 100%;
 				width: 100%;
 				position: absolute;
-				z-index: 1;
-				bottom: -120px;
-				right: -100px;
+				z-index: -1;
+				bottom: -0px;
+				transform: skewY(5deg);
+				transform-origin: 0;
+				right: 0px;
 				overflow: hidden;
-				background: url('/assets/img/header--demo-bg.png') no-repeat;
+				background: url('/assets/img/header--sub-bg.png') no-repeat;
 				background-position: bottom right;
-				background-size: contain;
+				background-size: cover;
 			}
 		}
 	}

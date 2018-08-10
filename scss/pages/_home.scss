@@ -106,6 +106,10 @@ section {
 	}
 }
 .section {
+	&--intro {
+		position: relative;
+		margin-top: -350px;
+	}
 	.section--image {
 		margin: 0 auto;
 		display: flex;
@@ -280,7 +284,6 @@ section {
 	}
 	&--cta {
 		background: $brand-primary;
-		margin-top: -120px;
 		h1,p {
 			color: white;
 		}
@@ -322,6 +325,9 @@ section {
 				font-size: 18px;
 				line-height: 30px;
 			}
+		}
+		&--home {
+			margin-top: -120px;
 		}
 	}
 	@include respond-to('medium') {
@@ -408,7 +414,7 @@ section {
 		align-items: center;
 		justify-content: center;
 		padding: 40px;
-		margin-left: 150px;
+		margin-left: 10px;
 	}
 	&:nth-of-type(even) {
 		flex-direction: row-reverse;
