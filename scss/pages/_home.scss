@@ -146,6 +146,7 @@ section {
 			display: none;
 		}
 		&--mobile {
+			background: #F6F7FD; 
 			display: block;
 			.works {
 				background: 0;
@@ -156,25 +157,54 @@ section {
 				justify-content: center;
 				padding: 0;
 				margin: 0;
-				.note {
-					margin: 0;
-					max-width: 355px !important;
-					min-width: 300px !important;
-					min-height: initial;
-					max-height: initial;
 				&:nth-of-type(even) {
-					flex-direction: column;
 					.note {
 						margin: 0;
+						margin-right: 0;
+						margin-left: 0;
+						margin-bottom: 20px;
 					}
 					.illustration {
 						margin: 0;
 					}
 				}
+				.note {
+					margin: 0;
+					margin-right: 0;
+					margin-left: 0;
+					margin-bottom: 20px;
+					max-width: 335px !important;
+					min-width: 300px !important;
+					min-height: initial;
+					max-height: initial;
+					.content {
+						padding: 40px 20px;
+					}
+					@include soft-shadow;
+					&:nth-of-type(even) {
+						flex-direction: column;
+						.note {
+							margin: 0;
+							margin-right: 0;
+						}
+						.illustration {
+							margin: 0;
+						}
+					}
 				}
 				.illustration {
 					margin: 0;
 					background: $brand-primary;
+					padding: 20px;
+				}
+			}
+			.call-to-action {
+				display: flex;
+				flex-direction: column;
+				margin-top: 40px;
+				a {
+					margin: 0 auto;
+					margin-top: 40px;
 				}
 			}
 		}
@@ -276,9 +306,15 @@ section {
 				left: -10%;
 			}
 			.tablet {
+				display: none;
 				position: absolute;
 				top: 30%;
 				right: -20%;
+			}
+		}
+		@include respond-to('medium') {
+			.tablet {
+				display: block;
 			}
 		}
 	}

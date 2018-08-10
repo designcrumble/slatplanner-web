@@ -71,3 +71,7 @@
          -o-transition: $args;
             transition: $args;
 }
+
+@mixin soft-shadow() {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 5px 15px rgba(57, 71, 107, 0.15);
+}
