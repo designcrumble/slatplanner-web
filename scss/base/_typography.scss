@@ -79,8 +79,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    line-height: rem(58px);
-    font-size: rem(30px);
+    line-height: rem(54px);
+    font-size: rem(34px);
     font-style: normal;
     font-weight: normal;
     line-height: normal;
@@ -175,8 +175,8 @@ p {
     font-size: $paragraph-size;
     line-height: $paragraph-line-height;
     font-weight: 300;
-    line-height: 36px;
-    font-size: 18px;
+    line-height: 24px;
+    font-size: 16px;
     letter-spacing: -0.015em;
     max-width: 600px;
     &:first-of-type {
@@ -191,21 +191,33 @@ p {
 }
 p.p1 {
     font-weight: 300;
-    line-height: 36px;
-    font-size: 18px;
+    line-height: 24px;
+    font-size: 16px;
     letter-spacing: -0.015em;
+    @include respond-to('medium'){
+        font-size: 18px;
+        line-height: 36px;
+    }
 }
 p.p2 {
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 16px;
+    font-size: 14px;
+    @include respond-to('medium'){
+        font-size: 16px;
+        line-height: 32px;
+    }
 }
 p.p3 {
     font-style: normal;
     font-weight: normal;
-    line-height: 24px;
-    font-size: 14px;
+    line-height: 20px;
+    font-size: 12px;
+    @include respond-to('medium'){
+        font-size: 14px;
+        line-height: 24px;
+    }
 }
 p.p4 {
     font-style: normal;
@@ -289,10 +301,14 @@ blockquote {
     font-size: $blockquote-size;
     line-height: $blockquote-line-height;
     font-weight: normal;
-    line-height: 54px;
-    font-size: 48px;
     letter-spacing: -0.02em;
     text-transform: uppercase;
+    line-height: 38px;
+    font-size: 34px;
+    @include respond-to('medium') {
+        line-height: 54px;
+        font-size: 48px;
+    }
 }
 
 blockquote.blockquote--b1 {

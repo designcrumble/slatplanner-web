@@ -124,7 +124,26 @@ a.cta {
 			}
 		}
 	}
+	&--mobile {
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding: 20px;
+		line-height: normal;
+		font-size: 20px;
+		letter-spacing: 0.05em;
+		&--primary {
+			background: $brand-primary;
+		}
+		&--secondary {
+			border-top: 1px solid rgba(white, 0.15);
+		}
+	}
 }
+
 .call-to-actions {
 	a {
 		padding-top: 10px;
@@ -137,8 +156,8 @@ a.cta {
 		}
 	}
 	.cta--primary {
-		background: $marigold;
-		color: $black;
-		border-color: $marigold;
+		background: $brand-primary;
+		color: $white;
+		border-color: $brand-primary;
 	}
 }

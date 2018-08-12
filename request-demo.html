@@ -11,56 +11,58 @@
 	<title>Slatplanner</title>
 
 	<link rel="icon" href="assets/img/favicon.png" type="image/png">
-	<link href="https://fonts.googleapis.com/css?family=Fjalla:100" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<div w3-include-html="partials/nav.html" class="nav--container"></div>
-	<header class="header header--request-demo header--sub-page"	>
-		<div class="hero" id="hero">
+	<div class="body-container">
+		<div w3-include-html="partials/nav.html" class="nav--container"></div>
+		<header class="header header--request-demo header--sub-page"	>
+			<div class="hero" id="hero">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<h1 class="hero--title">Schedule A Demo</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="section hubspot-form">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
-						<h1 class="hero--title">Schedule A Demo</h1>
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+						<script>
+						  hbspt.forms.create({
+							portalId: "4624696",
+							formId: "a304a903-f3e0-4efd-8456-56690bd438aa"
+						});
+						</script>
 					</div>
 				</div>
 			</div>
-		</div>
-	</header>
-	<section class="section hubspot-form">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
-					<script>
-					  hbspt.forms.create({
-						portalId: "4624696",
-						formId: "a304a903-f3e0-4efd-8456-56690bd438aa"
-					});
-					</script>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="section">
-		<div class="container">
-			<div class="row center-xs">
-				<div class="col-xs-10 col-md-6">
-					<div class="questions">
-						<div class="icon">
-							<img src="/assets/img/icons/icon--msg.svg" alt="message">
-						</div>
-						<div class="desc">
-							<h3 class="title">General Communication</h3>
-							<p class="p2">For general queries, including partnerships opportunities, please email <a href="#">daniel@slatplanner.com</a></p>
+		</section>
+		<section class="section">
+			<div class="container">
+				<div class="row center-xs">
+					<div class="col-xs-10 col-md-6">
+						<div class="questions">
+							<div class="icon">
+								<img src="/assets/img/icons/icon--msg.svg" alt="message">
+							</div>
+							<div class="desc">
+								<h3 class="title">General Communication</h3>
+								<p class="p2">For general queries, including partnerships opportunities, please email <a href="#">contact@slatplanner.com</a></p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<div w3-include-html="partials/footer.html" class="footer--container"></div>
+		</section>
+		<div w3-include-html="partials/footer.html" class="footer--container"></div>
+	</div>
 	<script src="https://www.w3schools.com/lib/w3.js"></script>
 	<script>
 	function includeHTML() {

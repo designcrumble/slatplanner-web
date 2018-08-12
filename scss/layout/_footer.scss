@@ -43,15 +43,22 @@ footer {
 			}
 		}
 		@include respond-to('medium') {
+			.left {
+				.brand {
+					width: 200px;
+					max-width: 225px;
+				}
+			}
 			.right {
 				.call-to-actions {
 					display: flex;
 					align-items: center;
 					a {
-						display: block;
+						display: flex;
 						height: initial;
 						width: initial;
-						padding: 15px 25px;
+						padding: 18px 25px;
+						font-size: 14px;
 						text-align: center;
 						vertical-align: middle;
 					}

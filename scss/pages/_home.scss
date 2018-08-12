@@ -1,5 +1,4 @@
 html,body {
-	height: 100%;
 	width: 100%;
 	background: none;
 	-webkit-font-smoothing: antialiased;
@@ -11,7 +10,14 @@ html,body {
 	// text-shadow: #fff 0px 1px 1px;
 
 }
+html {
+	height: 100%;
+}
 body {
+	min-height: 100%;
+	overflow-x: hidden;
+}
+.body-container {
 	overflow-x: hidden;
 }
 .typo--label {
@@ -56,12 +62,16 @@ body {
 	}
 	h1 {
 		margin-bottom: 20px;
-		line-height: 75px;
-		font-size: 48px;
 		text-align: center;
 		letter-spacing: 0.015em;
 		text-transform: uppercase;
 		color: #F2F2F2;
+		line-height: 53px;
+		font-size: 34px;
+		@include respond-to('medium') {
+			line-height: 75px;
+			font-size: 48px;
+		}
 	}
 	p {
 		margin-bottom: 40px;
@@ -69,17 +79,18 @@ body {
 	.actions	{
 		margin-top: 40px;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		a {
 			flex: 1;
-			max-width: 240px;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			justify-content: center;
-			margin-right: 20px;
+			margin-bottom: 20px;
+			min-width: 275px;
+			max-width: 275px;
 			&:last-of-type {
 				margin-right: 0;
 			}
@@ -95,6 +106,17 @@ body {
 		background: url('/assets/img/home/header--bg.png') no-repeat;
 		background-position: bottom right;
 		background-size: contain;
+	}
+	@include respond-to('medium') {
+		.actions {
+			flex-direction: row;
+			a {
+				max-width: 240px;
+				min-width: 240px;
+				margin-bottom: 0;
+				margin-right: 20px;
+			}
+		}
 	}
 }
 section {
@@ -137,8 +159,15 @@ section {
 				border-color: $marigold;
 				justify-content: center;
 				color: $black;
+				&:after {
+					transform: translateX(-101%);
+				}
 				&:hover {
 					color: white;
+					border-color: $black;
+				&:after {
+					transform: translateX(0%);
+				}
 				}
 			}
 		}
@@ -148,6 +177,22 @@ section {
 		&--mobile {
 			background: #F6F7FD; 
 			display: block;
+			.call-to-action {
+				a {
+					display: flex;
+					background: $marigold;
+					border-color: $marigold;
+					justify-content: center;
+					color: $black;
+					&:after {
+						transform: translateX(-101%);
+					}
+					&:hover {
+						color: white;
+					}
+
+				}
+			}
 			.works {
 				background: 0;
 				min-height: initial;
@@ -212,9 +257,10 @@ section {
 	&--testimonial {
 		background: $black;
 		padding-bottom: 0px;
+		padding-top: 40px;
 		.testimonial {
 			background: $brand-primary;
-			padding: 60px 100px;
+			padding: 60px 20px;
 			padding-bottom: 50px;
 			min-height: 500px;
 			position: relative;
@@ -228,7 +274,7 @@ section {
 			.quote {
 				position: relative;
 				z-index: 2;
-				margin-bottom: 60px;
+				margin-bottom: 40px;
 				max-width: 750px;
 				&:after {
 					position: absolute;
@@ -244,7 +290,7 @@ section {
 				}
 			}
 			.job-title {
-				font-size: 14px;
+				font-size: 12px;
 			}
 			h5 {
 				line-height: 36px;
@@ -255,11 +301,32 @@ section {
 			}
 			a.cta {
 				position: absolute;
-				bottom: 0;
+				top: 90%;
 				right: 0;
-				width: 240px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
 				background: $black;
 				border: 1px solid $black;
+			}
+			@include respond-to('medium') {
+				padding: 60px 100px;
+				.quote {
+					margin-bottom: 60px;
+				}
+				a.cta {
+					width: 240px;
+					top: initial;
+					bottom: 0;
+				}
+			}
+		}
+		@include respond-to('medium') {
+			padding-top: 100px;
+			.job-title {
+				font-size: 14px;
 			}
 		}
 	}
@@ -284,6 +351,7 @@ section {
 			justify-content: center;
 			align-items: center;
 			box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+			margin-bottom: 20px;
 		}
 		p {
 			text-align: center;
@@ -298,12 +366,16 @@ section {
 		}
 		.app-images {
 			margin-top: 80px;
+			min-height: 400px;
 			position: relative;
-
+			// overflow: hidden;
+			// min-height: 400px;
 			.phone {
 				position: absolute;
 				top: 10%;
-				left: -10%;
+				left: 0%;
+			    max-width: 55%;
+			    top: 5%;
 			}
 			.tablet {
 				display: none;
@@ -311,16 +383,36 @@ section {
 				top: 30%;
 				right: -20%;
 			}
+			.laptop {
+			    position: absolute;
+			    z-index: 0;
+			    left: 60px;
+			    margin-right: -150px;
+			}
 		}
 		@include respond-to('medium') {
-			.tablet {
-				display: block;
+			.app-images {
+				.tablet {
+					display: block;
+				}
+				.phone {
+					position: absolute;
+					top: 10%;
+					left: -10%;
+				    max-width: initial;
+				}
+				.laptop {
+					position: initial;
+				    z-index: 0;
+				    left: initial;
+				    margin-right: initial;
+				}
 			}
 		}
 	}
 	&--cta {
 		background: $brand-primary;
-		h1,p {
+		h2,p {
 			color: white;
 		}
 		.content {
@@ -329,7 +421,7 @@ section {
 			justify-content: center;
 			align-items: center;
 		}
-		h1 {
+		h2 {
 			line-height: 48px;
 			font-size: 34px;
 			text-align: center;
@@ -348,10 +440,10 @@ section {
 			color: $black;
 			background: $white;
 			border-color: $white;
-			margin-top: 40px;
+			
 		}
 		@include respond-to('medium') {
-			h1 {
+			h2 {
 				font-size: 56px;
 				line-height: 72px;
 				max-width: 940px;
