@@ -1,59 +1,33 @@
 $(window).load(function () {
 
-		$('#b-menu').click(function() {
-			$('.nav--mobile__menu').css('display', 'flex');
-			$('body').addClass('no-scroll');
-		});
+	$('#b-menu').click(function() {
+		$('.nav--mobile__menu').css('display', 'flex');
+		$('body').addClass('no-scroll');
+	});
 
-		$('#b-menu-close').click(function() {
-			$('.nav--mobile__menu').hide();
-			$('body').removeClass('no-scroll');
-		});
+	$('#b-menu-close').click(function() {
+		$('.nav--mobile__menu').hide();
+		$('body').removeClass('no-scroll');
+	});
 
-		$(window).on("scroll", function() {
-		  if ($(this).scrollTop() > 100) {
-		    $("nav").css("background","#00171F");
-		    $(".header-link").css("color","#fff");
-		  }
-		  else {
-		     $("nav").css("background","none");
-		     $(".header-link").css("color","#fff");
-		  }
-		});
+	$(window).on("scroll", function() {
+	  if ($(this).scrollTop() > 100) {
+	    $("nav").css("background","#00171F");
+	    $(".header-link").css("color","#fff");
+	  }
+	  else {
+	     $("nav").css("background","none");
+	     $(".header-link").css("color","#fff");
+	  }
+	});
+
+    var $headline = $("#heroTitle");
+
+    var xd=new TimelineMax()
+            .staggerTo($headline,1, {opacity:1, y:-20, ease: Back.easeInOut}, 0.5);
+
 });
 
-
-
-	// Desktop - GIF on Hover
-	// const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
-
-	// $(document).ready(function(){
-
-	// 	$('#burgermenu').click(function(){
-	// 	  $(this).toggleClass('open');
-	// 	  $('.header--mobile__menu').toggleClass('open');
-	// 	  console.log('called');
-	// 	  $("header").css("background","#00171F");
-	// 	});
-
-	// 	$(window).on("scroll", function() {
-	// 	  if ($(this).scrollTop() > 100) {
-	// 	    $("nav").css("background","#00171F");
-	// 	    $(".header-link").css("color","#fff");
-	// 	  }
-	// 	  else {
-	// 	     $("nav").css("background","none");
-	// 	     $(".header-link").css("color","#fff");
-	// 	  }
-	// 	});
-
-	// 	$('#burgermenu').click(function() {
-	// 		$('.nav--mobile__menu').css('visibility', 'visibile');
-	// 		console.log('called');
-	// 		$('.nav--mobile__menu').show();
-	// 	});
-
-	// });
 
 // $.fn.numberChange = function(options) {
 

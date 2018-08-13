@@ -4,6 +4,7 @@
 
 .section--team {
 	overflow-x: hidden;
+	position: relative;
 	&:after {
 		content: '';
 		display: block;
@@ -12,8 +13,8 @@
 		transform-origin: 0;
 		position: absolute;
 		z-index: -1;
-		height: 160%;
-		top: 150%;
+		top: 25%;
+		height: 60%;
 		left: 0%;
 		width: 140%;
 		overflow: hidden;
@@ -26,8 +27,17 @@
 	}
 	@include respond-to('medium') {
 		&:after {
-			top: 130%;
-			height: 110%;
+			top: 25%;
+			height: 60%;
+		}
+		h2 {
+			padding-bottom: 40px;
+		}
+	}
+	@include respond-to('huge') {
+		&:after {
+			top:35%;
+			height: 60%;
 		}
 		h2 {
 			padding-bottom: 40px;

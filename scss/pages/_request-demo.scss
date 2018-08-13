@@ -1,37 +1,37 @@
-#request-demo {
 
-}
-
-	.hbspt-form {
-		background: $white;
-		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07), 0px 15px 35px rgba(50, 50, 93, 0.1);
-		border-top: 10px solid $brand-primary;
-		max-width: 700px; 
-		margin: 0 auto;
-		padding: 60px;
-		position: absolute;
-		z-index: 5;
-		top: 450px;
-		left: 0;
-		right: 0;
-		label {
-			color: $black;
-			margin-bottom: 10px;
-		}
-		input {
-			background: #F6F9FC;
-			border-radius: 2px;
-			&:focus {
-				border-color: $brand-primary;
-			}
-		}
-		input.hs-input.error, div.field.error input, div.field.error textarea, div.field.error .chzn-choices, textarea.hs-input.error {
-			border-color: $error-color !important;
-		}
-		.hs-input {
-			background: #F6F9FC;
+.hbspt-form {
+	background: $white;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07), 0px 15px 35px rgba(50, 50, 93, 0.1);
+	border-top: 10px solid $brand-primary;
+	max-width: 95%; 
+	margin: 0 auto;
+	padding: 60px;
+	position: absolute;
+	z-index: 5;
+	top: 450px;
+	left: 0;
+	right: 0;
+	label {
+		color: $black;
+		margin-bottom: 10px;
+	}
+	input {
+		background: #F6F9FC;
+		border-radius: 2px;
+		&:focus {
+			border-color: $brand-primary;
 		}
 	}
+	input.hs-input.error, div.field.error input, div.field.error textarea, div.field.error .chzn-choices, textarea.hs-input.error {
+		border-color: $error-color !important;
+	}
+	.hs-input {
+		background: #F6F9FC;
+	}
+	@include respond-to('medium') {
+		max-width: 600px; 
+	}
+}
 
 /* Inputs in focus (selectors for all inputs when clicked)  */
 .hs-form input[type="text"]:focus,
@@ -90,5 +90,16 @@
 			text-transform: lowercase;
 			color: $brand-primary;
 		}
+	}
+}
+
+.section--request-demo-contact {
+	padding-top: 140px;
+	padding-bottom: 00px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	@include respond-to('medium') {
+		padding: 100px 0;
 	}
 }

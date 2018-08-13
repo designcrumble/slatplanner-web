@@ -120,11 +120,16 @@ body {
 	}
 }
 section {
-	padding: 100px 0;
-	min-height: 400px;
+	padding: 50px 0;
+	min-height: 300px;
 	h2 {
 		text-align: center;
 		margin: 0 auto;
+		max-width: 75%;
+	}
+	@include respond-to('medium') {
+		padding: 100px 0;
+		min-height: 400px;
 	}
 }
 .section {
@@ -138,6 +143,10 @@ section {
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
+		margin-top: 0;
+		.image {
+			max-width: 250px;
+		}
 	}
 	.section-description {
 		text-align: center;
@@ -361,12 +370,13 @@ section {
 	}
 	&--app {
 		padding-bottom: 0;
+		padding-top: 20px !important;
 		h2 {
 			margin-bottom: 20px;
 		}
 		.app-images {
 			margin-top: 80px;
-			min-height: 400px;
+			min-height: 350px;
 			position: relative;
 			// overflow: hidden;
 			// min-height: 400px;
@@ -387,25 +397,59 @@ section {
 			    position: absolute;
 			    z-index: 0;
 			    left: 60px;
+			    bottom: 70px;
 			    margin-right: -150px;
 			}
 		}
 		@include respond-to('medium') {
+			padding-top: 100px;
 			.app-images {
 				.tablet {
 					display: block;
+					width: 50%;
+					right: -10%;
+					top: 0%;
 				}
 				.phone {
 					position: absolute;
-					top: 10%;
-					left: -10%;
+					top: -10%;
+					left: 0%;
 				    max-width: initial;
+				    width: 30%;
 				}
 				.laptop {
 					position: initial;
 				    z-index: 0;
 				    left: initial;
 				    margin-right: initial;
+				    width: 80%;
+				    margin: 0 auto;
+				    margin-top: -5%;
+				}
+			}
+		}
+		@include respond-to('huge') {
+			.app-images {
+				.tablet {
+					display: block;
+					width: initial;
+					right: -25%;
+					top: 30%;
+				}
+				.phone {
+					position: absolute;
+					top: 10%;
+					left: -10%;
+				    max-width: initial;
+				    width: initial;
+				}
+				.laptop {
+					position: initial;
+				    z-index: 0;
+				    left: initial;
+				    margin-right: initial;
+				    width: initial;
+				    margin-top: 0;
 				}
 			}
 		}

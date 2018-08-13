@@ -191,9 +191,12 @@ h3 {
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-  font-size: 30px;
+  font-size: 24px;
   letter-spacing: 0.02em;
   text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 30px; } }
 
 h4 {
   line-height: normal;
@@ -1140,6 +1143,48 @@ header {
       background-position: bottom right;
       background-size: cover; }
 
+.header--sub h1, .header--sub p, .header--sub label {
+  margin: 0 auto;
+  color: white; }
+
+.header--sub h1 {
+  margin-bottom: 20px; }
+
+.header--sub .hero {
+  padding-top: 120px; }
+  .header--sub .hero form {
+    padding-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto; }
+    .header--sub .hero form label {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      font-family: "Fjalla One", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: normal;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      position: relative; }
+      .header--sub .hero form label span.discount {
+        position: absolute;
+        left: 110%;
+        width: 100px;
+        display: inline-block;
+        margin-left: 10px;
+        font-family: "Poppins", Playfair Display, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-weight: 900;
+        background: #FAA916;
+        color: white;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 4px; }
+
 footer {
   background: #00171F; }
   footer .top, footer .middle, footer .bottom {
@@ -1478,7 +1523,7 @@ nav {
   nav .center {
     display: flex;
     justify-content: center;
-    flex: 3; }
+    flex: 2; }
     nav .center ul li {
       margin-right: 20px; }
       nav .center ul li:last-of-type {
@@ -1563,7 +1608,7 @@ nav {
 .nav--desktop {
   display: none; }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nav--mobile {
     display: none; }
   .nav--desktop {
@@ -1705,11 +1750,16 @@ body {
         margin-right: 20px; } }
 
 section {
-  padding: 100px 0;
-  min-height: 400px; }
+  padding: 50px 0;
+  min-height: 300px; }
   section h2 {
     text-align: center;
-    margin: 0 auto; }
+    margin: 0 auto;
+    max-width: 75%; }
+  @media (min-width: 768px) {
+    section {
+      padding: 100px 0;
+      min-height: 400px; } }
 
 .section--intro {
   position: relative;
@@ -1720,7 +1770,10 @@ section {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 0; }
+  .section .section--image .image {
+    max-width: 250px; }
 
 .section .section-description {
   text-align: center;
@@ -1901,12 +1954,13 @@ section {
     color: #2F3C40; }
 
 .section--app {
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  padding-top: 20px !important; }
   .section--app h2 {
     margin-bottom: 20px; }
   .section--app .app-images {
     margin-top: 80px;
-    min-height: 400px;
+    min-height: 350px;
     position: relative; }
     .section--app .app-images .phone {
       position: absolute;
@@ -1923,20 +1977,49 @@ section {
       position: absolute;
       z-index: 0;
       left: 60px;
+      bottom: 70px;
       margin-right: -150px; }
   @media (min-width: 768px) {
+    .section--app {
+      padding-top: 100px; }
+      .section--app .app-images .tablet {
+        display: block;
+        width: 50%;
+        right: -10%;
+        top: 0%; }
+      .section--app .app-images .phone {
+        position: absolute;
+        top: -10%;
+        left: 0%;
+        max-width: initial;
+        width: 30%; }
+      .section--app .app-images .laptop {
+        position: initial;
+        z-index: 0;
+        left: initial;
+        margin-right: initial;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: -5%; } }
+  @media (min-width: 1200px) {
     .section--app .app-images .tablet {
-      display: block; }
+      display: block;
+      width: initial;
+      right: -25%;
+      top: 30%; }
     .section--app .app-images .phone {
       position: absolute;
       top: 10%;
       left: -10%;
-      max-width: initial; }
+      max-width: initial;
+      width: initial; }
     .section--app .app-images .laptop {
       position: initial;
       z-index: 0;
       left: initial;
-      margin-right: initial; } }
+      margin-right: initial;
+      width: initial;
+      margin-top: 0; } }
 
 .section--cta {
   background: #3D5AFE; }
@@ -2080,50 +2163,8 @@ section {
     .works--4 .note .title {
       color: #00171F; }
 
-.header--sub h1, .header--sub p, .header--sub label {
-  margin: 0 auto;
-  color: white; }
-
-.header--sub h1 {
-  margin-bottom: 20px; }
-
-.header--sub .hero {
-  padding-top: 120px; }
-  .header--sub .hero form {
-    padding-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 500px;
-    margin: 0 auto; }
-    .header--sub .hero form label {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      font-family: "Fjalla One", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: normal;
-      font-size: 16px;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      color: #FFFFFF;
-      position: relative; }
-      .header--sub .hero form label span.discount {
-        position: absolute;
-        left: 110%;
-        width: 100px;
-        display: inline-block;
-        margin-left: 10px;
-        font-family: "Poppins", Playfair Display, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        font-weight: 900;
-        background: #FAA916;
-        color: white;
-        padding: 5px 10px;
-        font-size: 12px;
-        border-radius: 4px; }
-
 .pricing-cards {
-  padding-bottom: 200px; }
+  padding-bottom: 100px; }
 
 .schedule-demo--cta h2 {
   margin-bottom: 20px; }
@@ -2144,10 +2185,7 @@ section {
 
 .section--pricing-help {
   background: #FFFFFF;
-  border-top: 1px solid rgba(0, 23, 31, 0.15);
-  padding: 0;
-  padding-top: 100px;
-  padding-bottom: 100px; }
+  border-top: 1px solid rgba(0, 23, 31, 0.15); }
   .section--pricing-help h2 {
     margin-bottom: 20px; }
   .section--pricing-help p {
@@ -2185,6 +2223,8 @@ section {
     flex-direction: column;
     align-items: center;
     padding-bottom: 30px; }
+    .pricing-card .plan-details h2 {
+      max-width: initial; }
   .pricing-card .fee {
     display: flex;
     flex-direction: row;
@@ -2314,7 +2354,8 @@ input:checked + .slider:before {
   border-radius: 50%; }
 
 .section--team {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  position: relative; }
   .section--team:after {
     content: '';
     display: block;
@@ -2323,8 +2364,8 @@ input:checked + .slider:before {
     transform-origin: 0;
     position: absolute;
     z-index: -1;
-    height: 160%;
-    top: 150%;
+    top: 25%;
+    height: 60%;
     left: 0%;
     width: 140%;
     overflow: hidden;
@@ -2335,8 +2376,14 @@ input:checked + .slider:before {
     margin-bottom: 60px; }
   @media (min-width: 768px) {
     .section--team:after {
-      top: 130%;
-      height: 110%; }
+      top: 25%;
+      height: 60%; }
+    .section--team h2 {
+      padding-bottom: 40px; } }
+  @media (min-width: 1200px) {
+    .section--team:after {
+      top: 35%;
+      height: 60%; }
     .section--team h2 {
       padding-bottom: 40px; } }
 
@@ -2393,7 +2440,7 @@ input:checked + .slider:before {
   background: #FFFFFF;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07), 0px 15px 35px rgba(50, 50, 93, 0.1);
   border-top: 10px solid #3D5AFE;
-  max-width: 700px;
+  max-width: 95%;
   margin: 0 auto;
   padding: 60px;
   position: absolute;
@@ -2413,6 +2460,9 @@ input:checked + .slider:before {
     border-color: #FC5356 !important; }
   .hbspt-form .hs-input {
     background: #F6F9FC; }
+  @media (min-width: 768px) {
+    .hbspt-form {
+      max-width: 600px; } }
 
 /* Inputs in focus (selectors for all inputs when clicked)  */
 .hs-form input[type="text"]:focus,
@@ -2466,6 +2516,16 @@ input:checked + .slider:before {
       text-transform: lowercase;
       color: #3D5AFE; }
 
+.section--request-demo-contact {
+  padding-top: 140px;
+  padding-bottom: 00px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  @media (min-width: 768px) {
+    .section--request-demo-contact {
+      padding: 100px 0; } }
+
 .section--supplies .supply {
   margin: 80px 0;
   position: relative; }
@@ -2476,7 +2536,8 @@ input:checked + .slider:before {
     bottom: -80px;
     max-width: 80%;
     width: 80%;
-    padding: 20px 0; }
+    padding: 20px 0;
+    padding-bottom: 0; }
     .section--supplies .supply__metadata h3 {
       margin-bottom: 10px; }
     .section--supplies .supply__metadata a {
@@ -2503,4 +2564,7 @@ input:checked + .slider:before {
   .section--supplies .supply--secondary {
     margin: 80px 0; }
     .section--supplies .supply--secondary__metadata {
-      padding: 0 40px; }
+      padding-top: 40px; }
+    @media (min-width: 768px) {
+      .section--supplies .supply--secondary__metadata {
+        padding: 0 40px; } }

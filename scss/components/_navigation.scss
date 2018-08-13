@@ -40,7 +40,7 @@ nav {
 	.center {
 		display: flex;
 		justify-content: center;
-		flex: 3;
+		flex: 2;
 		ul {
 			li {
 				margin-right: 20px;
@@ -148,7 +148,7 @@ nav {
 	&--desktop {
 		display: none;
 	}
-	@include respond-to('medium') {
+	@include respond-to('large') {
 		&--mobile {
 			display: none;
 		}

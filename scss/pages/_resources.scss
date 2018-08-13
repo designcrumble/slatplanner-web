@@ -10,6 +10,7 @@
 			max-width: 80%;
 			width: 80%;
 			padding: 20px 0;
+			padding-bottom: 0;
 			h3 {
 				margin-bottom: 10px;
 			}
@@ -38,7 +39,12 @@
 		&--secondary {
 			margin: 80px 0;
 			&__metadata {
-				padding: 0 40px;
+				padding-top: 40px;
+			}
+			@include respond-to('medium') {
+				&__metadata {
+					padding: 0 40px;
+				}
 			}
 		}
 	}
