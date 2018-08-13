@@ -2568,3 +2568,90 @@ input:checked + .slider:before {
     @media (min-width: 768px) {
       .section--supplies .supply--secondary__metadata {
         padding: 0 40px; } }
+
+.not-found-page {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(61, 90, 254, 0.05); }
+  .not-found-page .body-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative; }
+    .not-found-page .body-container:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      height: 80%;
+      width: 100%;
+      right: 0;
+      background: url("/assets/img/404.png") no-repeat;
+      background-size: contain;
+      background-position: top right; }
+
+#not-found {
+  display: flex;
+  flex-direction: column;
+  align: center;
+  justify-content: center;
+  padding-top: 30vh; }
+  #not-found .top {
+    display: flex;
+    align-items: center; }
+    #not-found .top h6 {
+      margin-left: 20px; }
+  #not-found h6 {
+    font-family: "Poppins", Playfair Display, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #FC5356;
+    font-weight: 600;
+    font-size: 16px; }
+  #not-found h1 span {
+    display: block;
+    color: #3D5AFE; }
+  #not-found #error-content {
+    margin-top: 100px; }
+    #not-found #error-content h1 {
+      margin-bottom: 20px; }
+    #not-found #error-content p {
+      margin-bottom: 40px; }
+    #not-found #error-content a {
+      margin-bottom: 20px; }
+    #not-found #error-content .cta--primary {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      min-width: 200px; }
+      #not-found #error-content .cta--primary:hover {
+        border-color: #00171F; }
+    #not-found #error-content .cta--dark {
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      min-width: 200px;
+      border: 1px solid #00171F;
+      color: #00171F;
+      position: relative;
+      display: inline-flex;
+      overflow: hidden;
+      z-index: 2;
+      overflow: hidden; }
+      #not-found #error-content .cta--dark:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #00171F;
+        transform: translateX(-101%);
+        z-index: -1;
+        transition: 0.5s ease-in-out; }
+      #not-found #error-content .cta--dark:hover {
+        color: #FFFFFF;
+        border-color: #00171F;
+        transition: all 0.2s ease; }
+        #not-found #error-content .cta--dark:hover:after {
+          transform: translateX(0);
+          transition: 0.5s ease-in-out; }
