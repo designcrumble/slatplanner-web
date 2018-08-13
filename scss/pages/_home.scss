@@ -525,8 +525,8 @@ section {
 		flex-direction: column;
 		min-height: 30%;
 		margin-left: 60px;
-		min-width: 400px;
-		max-width: 400px;
+		max-width: 200px;
+		min-width: 300px;
 		max-height: 85%;
 		background: white;
 		margin-top: -40px;
@@ -534,7 +534,6 @@ section {
 			display: flex;
 			flex-direction: column;
 			padding: 80px 50px;
-			padding-bottom: 100px;
 		}
 		.banner {
 			display: block;
@@ -579,6 +578,9 @@ section {
 				}
 			}
 		}
+		@include respond-to('large') {
+			min-width: 400px;
+		}
 	}
 	.illustration {
 		display: flex;
@@ -595,7 +597,6 @@ section {
 		}
 		.illustration {
 			margin: 0;
-			margin-right: 150px;
 		}
 	}
 	&--1 {
