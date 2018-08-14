@@ -10,6 +10,9 @@ header {
 }
 
 .header {
+	&--main {
+		min-height: 850px;
+	}
 	&--sub-page {
 		height: 640px;
 		padding-top: 100px;

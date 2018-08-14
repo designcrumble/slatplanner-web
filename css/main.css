@@ -1115,6 +1115,9 @@ header {
   overflow: hidden;
   overflow-x: hidden; }
 
+.header--main {
+  min-height: 850px; }
+
 .header--sub-page {
   height: 640px;
   padding-top: 100px; }
@@ -1301,7 +1304,8 @@ footer {
           margin-bottom: 0; } }
 
 .hero--main {
-  padding-top: 150px; }
+  padding-top: 150px;
+  min-height: 600px; }
   @media (min-width: 768px) {
     .hero--main {
       padding-top: 200px; } }
@@ -1666,6 +1670,54 @@ body {
 .body-container {
   overflow-x: hidden; }
 
+.hero-elements {
+  position: relative; }
+  .hero-elements .monogram {
+    position: absolute;
+    right: 0%;
+    top: -5px;
+    width: 20px;
+    opacity: 0; }
+    .hero-elements .monogram img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; }
+  .hero-elements .strike {
+    width: 500px;
+    height: 10px;
+    right: 29.5%;
+    top: 10px;
+    z-index: 2;
+    background: #3D5AFE;
+    opacity: 0;
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 2; }
+    .hero-elements .strike:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #FFFFFF;
+      transform: translateX(-101%);
+      z-index: -1;
+      transition: 2s ease-in-out; }
+    .hero-elements .strike:hover {
+      color: #00171F;
+      border-color: #FFFFFF;
+      transition: all 0.2s ease; }
+      .hero-elements .strike:hover:after {
+        transform: translateX(101%);
+        transition: 2s ease-in-out; }
+  @media (min-width: 768px) {
+    .hero-elements .monogram {
+      right: 27%;
+      top: -10px;
+      width: 30px; } }
+
 .typo--label {
   display: block;
   font-family: "Poppins", Playfair Display, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -1709,7 +1761,7 @@ body {
     font-size: 34px; }
     @media (min-width: 768px) {
       #hero h1 {
-        line-height: 75px;
+        line-height: 64px;
         font-size: 48px; } }
   #hero p {
     margin-bottom: 40px; }
@@ -1967,12 +2019,14 @@ section {
       top: 10%;
       left: 0%;
       max-width: 55%;
-      top: 5%; }
+      top: 5%;
+      z-index: 4; }
     .section--app .app-images .tablet {
       display: none;
       position: absolute;
       top: 30%;
-      right: -20%; }
+      right: -20%;
+      z-index: 4; }
     .section--app .app-images .laptop {
       position: absolute;
       z-index: 0;

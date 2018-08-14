@@ -20,6 +20,59 @@ body {
 .body-container {
 	overflow-x: hidden;
 }
+
+.hero-elements {
+	position: relative;
+	.monogram {
+		position: absolute;
+		right: 0%;
+		top: -5px;
+		width: 20px;
+		opacity: 0;
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+	}
+	.strike {
+		width: 500px;
+		height: 10px;
+		right: 29.5%;
+		top: 10px;
+		z-index: 2;
+		background: $brand-primary;
+		opacity: 0;
+		position: absolute;
+		display: inline-block;
+		overflow: hidden;
+		z-index: 2;
+		&:after {
+			content: '';
+			@include absolute(0,0,0,0);
+			background-color: $white;
+			transform: translateX(-101%);
+			z-index: -1;
+			transition: 2s ease-in-out;
+			}
+			&:hover {
+			color: $black;
+			border-color: $white;
+			transition: all 0.2s ease;
+			&:after {
+			  transform: translateX(101%);
+			 transition: 2s ease-in-out;
+			}
+		}
+	}
+	@include respond-to('medium') {
+		.monogram {
+			right: 27%;
+			top: -10px;
+			width: 30px;
+		}
+	}
+}
 .typo--label {
 	display: block;
 	font-family: $font-family;
@@ -43,7 +96,9 @@ body {
 	padding: 40px 0;
 }
 
-
+// #hero h1 {
+// 	opacity: 0;
+// }
 #hero {
 	display: flex;
 	align-items: center;
@@ -69,7 +124,7 @@ body {
 		line-height: 53px;
 		font-size: 34px;
 		@include respond-to('medium') {
-			line-height: 75px;
+			line-height: 64px;
 			font-size: 48px;
 		}
 	}
@@ -386,12 +441,14 @@ section {
 				left: 0%;
 			    max-width: 55%;
 			    top: 5%;
+			    z-index: 4;
 			}
 			.tablet {
 				display: none;
 				position: absolute;
 				top: 30%;
 				right: -20%;
+				 z-index: 4;
 			}
 			.laptop {
 			    position: absolute;

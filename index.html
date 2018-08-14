@@ -19,14 +19,18 @@
 <body>
 	<div class="body-container">
 		<div w3-include-html="partials/nav.html" class="nav--container"></div>
-		<header class="header"	>
+		<header class="header header--main"	>
 			<div class="hero hero--main" id="hero">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12">
+							<div class="hero-elements">
+								<div class="monogram"><img src="/assets/img/brand/monogram--white.svg" alt=""></div>
+								<div class="strike"></div>
+							</div>
 							<h1 class="hero--title" id="heroTitle">Linking Physical and Digital Planning</h1>
-							<p class="p1">Yield the full benefits of digital planning, without sacrificing the physical, collaborative experience.</p>
-							<div class="actions">
+							<p class="p1" id="subHeader">Yield the full benefits of digital planning, without sacrificing the physical, collaborative experience.</p>
+							<div class="actions" id="heroActions">
 								<a href="#" class="cta cta--primary cta--hero">
 									Get Started – It’s Free
 								</a>
@@ -40,7 +44,7 @@
 			</div>
 		</header>
 
-		<section class="section section--hiw section--hiw--desktop">
+		<section class="section section--hiw section--hiw--desktop section-anim">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 ">
@@ -112,7 +116,7 @@
 			</div>
 		</section>
 
-		<section class="section  section--hiw--mobile">
+		<section class="section  section--hiw--mobile section-anim">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 ">
@@ -180,7 +184,7 @@
 			</div>
 		</section>
 		
-		<section class="section section--testimonial">
+		<section class="section section--testimonial section-anim">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-10 testimonial">
@@ -205,7 +209,7 @@
 			</div>
 		</section>
 
-		<section class="section section--integrations">
+		<section class="section section--integrations section-anim">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
@@ -244,7 +248,7 @@
 			</div>
 		</section>
 
-		<section class="section section--app">
+		<section class="section section--app section-anim">
 			<div class="container">
 				<div class="row center-xs">
 					<div class="col-xs-12">
@@ -318,6 +322,7 @@
 	includeHTML();
 	</script>
 	<script src="/assets/js/jquery-2.1.1.js"></script>
+	<script src="/assets/js/jquery.blast.min.js"></script>
 	<script src="/assets/js/TweenMax.min.js"></script>
 	<script src="/assets/js/scripts.js"></script>
 </body>
