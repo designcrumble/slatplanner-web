@@ -3,8 +3,8 @@ header {
 	min-height: 700px;
 	width: 100%;
 	background: $black;
+	background: linear-gradient(278.6deg, #00171F 12.39%, #180040 100%);
 	max-width: 100%;
-	background: $black;
 	overflow: hidden;
 	overflow-x: hidden;
 }
@@ -77,7 +77,7 @@ header {
 				position: relative;
 				span.discount {
 					position: absolute;
-					left: 110%;
+					top: 110%;
 					width: 100px;
 					display: inline-block;
 					margin-left: 10px;
@@ -87,7 +87,11 @@ header {
 					color: white;
 					padding: 5px 10px;
 					font-size: 12px;
-					border-radius: 4px;
+					border-radius: 50px;
+					@include respond-to('medium') {
+						top: initial;
+						left: 105%;
+					}
 				}
 			}
 		}

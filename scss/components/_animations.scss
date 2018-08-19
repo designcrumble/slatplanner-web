@@ -46,3 +46,7 @@
     transform: translateY(-5px);
   }
 }
+
+.x {
+  animation: slide_up 600ms ease 100ms 1 normal forwards running;
+}

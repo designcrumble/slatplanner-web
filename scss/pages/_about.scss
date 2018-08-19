@@ -58,6 +58,19 @@
 	margin-bottom: 40px;
 	.player-body {
 		position: relative;
+		.profile {
+			max-height: 460px;
+			overflow: hidden;
+			width: 170px;
+			img {
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+			}
+			@include respond-to('medium') {
+				width: 350px;
+			}
+		}
 
 	}
 	.metadata {

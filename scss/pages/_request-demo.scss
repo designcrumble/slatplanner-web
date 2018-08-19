@@ -65,8 +65,30 @@
 }
 
 .hs-button {
-	background-color: $brand-primary;
-	border-color: $brand-primary;
+	background-color: $brand-primary !important;
+	border-color: $brand-primary !important;
+	border: 1px solid $brand-primary !important;
+	position: relative !important;
+	display: inline-block !important;
+	overflow: hidden !important;
+	z-index: 2 !important;
+	overflow: hidden !important;
+	&:after {
+		content: '';
+		@include absolute(0,0,0,0);
+		background-color: $black;
+		transform: translateX(-98%);
+		z-index: -1;
+		transition: 0.5s ease-in-out;
+		}
+		&:hover {
+		color: $white;
+		transition: all 0.2s ease;
+		&:after {
+		  transform: translateX(0);
+		 transition: 0.5s ease-in-out;
+		}
+	}
 }
 
 .questions {

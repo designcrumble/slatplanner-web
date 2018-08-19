@@ -17,6 +17,15 @@ body {
 	min-height: 100%;
 	overflow-x: hidden;
 }
+
+body.body-main {
+    opacity: 0;
+}
+ 
+.all-loaded {
+    opacity: 1 !important;
+}
+
 .body-container {
 	overflow-x: hidden;
 }
@@ -106,7 +115,7 @@ body {
 	height: 100%;
 	width: 100%;
 	max-width: 100%;
-	background: $black;
+
 	.container {
 		z-index: 2;
 	}
@@ -160,7 +169,7 @@ body {
 		overflow: hidden;
 		background: url('/assets/img/home/header--bg.png') no-repeat;
 		background-position: bottom right;
-		background-size: contain;
+		background-size: cover;
 	}
 	@include respond-to('medium') {
 		.actions {
@@ -319,9 +328,11 @@ section {
 		}
 	}
 	&--testimonial {
-		background: $black;
+		background: url(/assets/img/home/testimonials--pattern.svg), $black;	
+		background-size: contain;
 		padding-bottom: 0px;
 		padding-top: 40px;
+		margin-bottom: 30px;
 		.testimonial {
 			background: $brand-primary;
 			padding: 60px 20px;
@@ -374,6 +385,9 @@ section {
 				width: 100%;
 				background: $black;
 				border: 1px solid $black;
+				&:hover {
+					border-color: $white;
+				}
 			}
 			@include respond-to('medium') {
 				padding: 60px 100px;

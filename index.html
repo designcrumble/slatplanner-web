@@ -15,8 +15,35 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
+	<noscript>
+	    <style>
+		    body {
+			    opacity: 1;
+		    }
+	    </style>
+	</noscript>
+	<!-- load and instantiate ScrollReveal first -->
+	<script src="assets/js/scrollreveal.min.js"></script> 
+	<script>
+		window.sr = ScrollReveal();
+
+		// Add class to <html> if ScrollReveal is supported 
+		// Note: this method is deprecated, and only works in version 3 
+		if (sr.isSupported()) {
+			document.documentElement.classList.add('sr');
+		}
+
+	</script> 
+
+	<style>
+
+		/* Ensure elements load hidden before ScrollReveal runs */
+		.sr .fooReveal { visibility: hidden; }
+
+	</style>
+	 
 </head>
-<body>
+<body class="body-main">
 	<div class="body-container">
 		<div w3-include-html="partials/nav.html" class="nav--container"></div>
 		<header class="header header--main"	>
@@ -200,10 +227,7 @@
 								Manager of Scheduling and Innovative Support
 							</div>
 						</div>
-
-						<div class="cta">
-							<a href="#" class="cta cta--primary cta--dark	">Get Started - It’s Free</a>
-						</div>
+						<a href="#" class="cta cta--primary cta--dark	">Get Started - It’s Free</a>
 					</div>
 				</div>
 			</div>
