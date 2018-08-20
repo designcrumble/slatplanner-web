@@ -319,6 +319,46 @@ section {
 					background: $brand-primary;
 					padding: 20px;
 				}
+				&--1 {
+					.note {
+						.illustration {
+							background: $brand-primary;
+						}
+						.title {
+							color: $brand-primary;
+						}
+					}
+				}
+				&--2 {
+					.note {
+						.illustration {
+							background: $marigold;
+						}
+						.title {
+							color: $marigold;
+						}
+					}
+				}
+				&--3 {
+					.note {
+						.illustration {
+							background: #27B8F0;
+						}
+						.title {
+							color: #27B8F0;
+						}
+					}
+				}
+				&--4 {
+					.note {
+						.illustration {
+							background: $black;
+						}
+						.title {
+							color: $black;
+						}
+					}
+				}
 			}
 			.call-to-action {
 				display: flex;
@@ -698,13 +738,13 @@ section {
 		}
 	}
 	&--3 {
-		background: $slat-blue;
+		background: #27B8F0;
 		.note {
 			.banner {
-				background: $slat-blue;
+				background: #27B8F0;
 			}
 			.title {
-				color: $slat-blue;
+				color: #27B8F0;
 			}
 		}
 	}

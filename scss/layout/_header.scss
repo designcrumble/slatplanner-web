@@ -75,12 +75,15 @@ header {
 				text-transform: uppercase;
 				color: #FFFFFF;
 				position: relative;
+				.price-active {
+					color: $brand-primary;
+				}
 				span.discount {
 					position: absolute;
 					top: 110%;
 					width: 100px;
+					margin-top: 10px;
 					display: inline-block;
-					margin-left: 10px;
 					font-family: $font-family;
 					font-weight: 900;
 					background: $marigold;
@@ -90,6 +93,8 @@ header {
 					border-radius: 50px;
 					@include respond-to('medium') {
 						top: initial;
+						margin-left: 10px;
+						margin-top: 0px;
 						left: 105%;
 					}
 				}

@@ -52,14 +52,13 @@ $(window).load(function () {
 	// 	tl.staggerFromTo(".blast", 0.15, {autoAlpha:0}, {autoAlpha:1},0.055);
 
 	var xd=new TimelineMax()
-	            .staggerFrom('header',0.5, {opacity:0, width:0, ease: Power1.easeOut}, 0.5)
-	            .staggerFrom('#hero',0.5, {opacity:0, height:0, ease: Power1.easeOut}, 0.5)
-	            .staggerFrom('nav',1, {opacity:0, y:20, ease: Back.easeInOut}, 0.5)
-	            .staggerFrom($headline,1, {opacity:0, y:20, ease: Back.easeInOut}, 1.5)
+	            .staggerFrom('header',0.35, {opacity:0, width:0, ease: Power1.easeOut}, 0.3)
+	            .staggerFrom('#hero',0.35, {opacity:0, height:0, ease: Power1.easeOut}, 0.3)
+	            .staggerFrom('nav',0.5, {opacity:0, y:20, ease: Back.easeInOut}, 0.3)
+	            .staggerFrom($headline,1, {opacity:0, y:20, ease: Back.easeInOut}, 0.5)
 	             .staggerTo($monogram,1, {opacity:1, y: -20, ease: Back.easeInOut}, 0.5)
 	            .staggerFrom($subHeader ,0.75, {opacity:0, y:20, ease: Back.easeInOut}, 0.5)
-	            .staggerFrom($heroActions,0.5, {opacity:0, y:20, ease: Back.easeInOut}, 0.5)
-	            .staggerFrom('.section-anim',1, {opacity:0, y:20, ease: Back.easeInOut}, 0.5);
+	            .staggerFrom($heroActions,0.5, {opacity:0, y:20, ease: Back.easeInOut}, 0.5);
 	            // .staggerFrom($strike,1, {opacity:1, x: 50, ease: Back.easeInOut}, 0.5)
 	          
 	  // place this within dom ready function

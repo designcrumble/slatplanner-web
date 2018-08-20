@@ -38,6 +38,10 @@
 		}
 		&--secondary {
 			margin: 80px 0;
+			p {
+				font-size: 16px;
+				color: $black--light;
+			}
 			&__metadata {
 				padding-top: 40px;
 			}
