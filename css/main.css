@@ -2105,7 +2105,8 @@ section {
       position: absolute;
       top: 30%;
       right: -20%;
-      z-index: 4; }
+      z-index: 4;
+      max-width: 750px; }
     .section--app .app-images .laptop {
       position: absolute;
       z-index: 0;
