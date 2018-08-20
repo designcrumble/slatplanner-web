@@ -22,6 +22,10 @@ body.body-main {
     opacity: 0;
 }
  
+ ::selection {
+ 	background: $brand-primary;
+ 	color: $white;	
+ }
 .all-loaded {
     opacity: 1 !important;
 }
