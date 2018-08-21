@@ -162,6 +162,13 @@ body.body-main {
 			&:last-of-type {
 				margin-right: 0;
 			}
+			&:hover {
+				 :not(a) {
+					filter: blur(2px);
+					transform: translateY(-5px);
+					transition: all 0.3s ease;
+				}
+			}
 		}
 	}
 	&:after {
