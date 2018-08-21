@@ -2149,7 +2149,7 @@ section {
         position: absolute;
         top: -10%;
         left: 0%;
-        max-width: initial;
+        max-width: 400px;
         width: 30%; }
       .section--app .app-images .laptop {
         position: initial;
@@ -2169,7 +2169,6 @@ section {
       position: absolute;
       top: 10%;
       left: -10%;
-      max-width: initial;
       width: initial; }
     .section--app .app-images .laptop {
       position: initial;
