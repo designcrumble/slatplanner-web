@@ -76,7 +76,9 @@ mixpanel.init("cd7728789971534c2317ee8a8c11cf6f");</script><!-- end Mixpanel -->
 					<div class="col-xs-12 col-md-6">
 						<div class="supply">
 							<div class="supply__image">
-								<div class="sketchfab-embed-wrapper"><iframe width="100%" height="480" src="https://sketchfab.com/models/f731a4073c404c46b49c85856b8682b2/embed?autospin=0.2" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<!-- 								<div class="sketchfab-embed-wrapper"><iframe width="100%" height="480" src="https://sketchfab.com/models/f731a4073c404c46b49c85856b8682b2/embed?autospin=0.2" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> -->
+									<div class="sketchfab-embed-wrapper"><iframe width="100%" height="480" src="https://sketchfab.com/models/f731a4073c404c46b49c85856b8682b2/embed?autospin=0.2&amp;autostart=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
 <!-- 								<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
 								    <a href="https://sketchfab.com/models/f731a4073c404c46b49c85856b8682b2?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">SlatNote from SlatPlanner</a>
 								    by <a href="https://sketchfab.com/slatplanner?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">slatplanner</a>
@@ -87,7 +89,8 @@ mixpanel.init("cd7728789971534c2317ee8a8c11cf6f");</script><!-- end Mixpanel -->
 							<div class="supply__metadata">
 								<h3 class="title">SlatNotes®<span>Patent Pending</span></h3>
 								<p class="p3">Reusable and made of a high-quality, dry-erase material.</p>
-								<a href="#" class="cta cta--secondary cta--dark">BUY NOW</a>
+<!-- 								<a href="#" class="cta cta--secondary cta--dark">BUY NOW</a> -->
+								<div id='product-component-f2aa4e3d310'></div>
 							</div>
 						</div>
 					</div>
@@ -111,7 +114,7 @@ mixpanel.init("cd7728789971534c2317ee8a8c11cf6f");</script><!-- end Mixpanel -->
 			<div class="container">
 				<div class="row center-xs">
 					<div class="col-xs-12">
-						<h2>You Would Also Need</h2>
+						<h2>You Also Need</h2>
 					</div>
 				</div>
 				<div class="row supply--secondary">
@@ -123,8 +126,8 @@ mixpanel.init("cd7728789971534c2317ee8a8c11cf6f");</script><!-- end Mixpanel -->
 					<div class="col-xs-12 col-md-8">
 						<div class="supply--secondary__metadata">
 							<h3 class="title">Printer</h3>
-							<p class="p3">We highly recommend keeping a dedicated color printer in the planning area for printing unscheduled (backlog) tasks at a moment’s notice. </p>
-							<p class="p3">We recommend the <a href="#">HP Envy 5660</a> for under a hundred dollars. It’s wireless which means you can print from Android, and supports AirPrint ® which means you can print from any iPhone or iPad.</p>
+							<p class="p3">We highly recommend keeping a dedicated color printer in the planning area for printing new tasks at a moment’s notice. </p>
+							<p class="p3">We recommend the <a href="#">HP Envy 5660</a> , for under a hundred dollars. It’s wireless and supports AirPrint ®, which means that you can print task stickers, on the fly, from any computer, tablet, or phone.</p>
 						</div>
 					</div>
 				</div>
@@ -137,7 +140,7 @@ mixpanel.init("cd7728789971534c2317ee8a8c11cf6f");</script><!-- end Mixpanel -->
 					<div class="col-xs-12 col-md-8">
 						<div class="supply--secondary__metadata">
 							<h3 class="title">Slat Wall or Slat Board</h3>
-							<p class="p3">SlatNotes mechanically attach to slat walls, so your pieces will never lose their stick no matter how many times you move them. They create clean rows and make it easy to slide groups of activities together. </p>
+							<p class="p3">SlatNotes mechanically attach to slat walls, so your pieces will never lose their stick, no matter how many times you move or slide them. </p>
 							<p class="p3">Slat boards come in multiple styles and finishes and can be seamlessly combined to create a collaborative wall space as large as you need. Extra slat-wall space can also be used to hang anything! They are available locally at retail fixture supply stores in any city.</p>
 						</div>
 					</div>
@@ -191,7 +194,168 @@ mixpanel.init("cd7728789971534c2317ee8a8c11cf6f");</script><!-- end Mixpanel -->
 	<script>
 	includeHTML();
 	</script>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'slatplanner.myshopify.com',
+      storefrontAccessToken: '0f265ee7b343d8a4b3adb2e58e8c25e2',
+    });
+
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: [1378195734640],
+        node: document.getElementById('product-component-f2aa4e3d310'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+  "product": {
+    "buttonDestination": "checkout",
+    "variantId": "all",
+    "width": "240px",
+    "contents": {
+      "img": false,
+      "imgWithCarousel": false,
+      "title": false,
+      "variantTitle": false,
+      "price": false,
+      "description": false,
+      "buttonWithQuantity": false,
+      "quantity": false
+    },
+    "text": {
+      "button": "BUY NOW"
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      },
+      "button": {
+        "background-color": "#3d5afe",
+        ":hover": {
+          "background-color": "#3751e5"
+        },
+        ":focus": {
+          "background-color": "#3751e5"
+        }
+      }
+    }
+  },
+  "cart": {
+    "contents": {
+      "button": true
+    },
+    "styles": {
+      "button": {
+        "background-color": "#3d5afe",
+        ":hover": {
+          "background-color": "#3751e5"
+        },
+        ":focus": {
+          "background-color": "#3751e5"
+        }
+      },
+      "footer": {
+        "background-color": "#ffffff"
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "variantTitle": false,
+      "buttonWithQuantity": true,
+      "button": false,
+      "quantity": false
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "background-color": "#3d5afe",
+        ":hover": {
+          "background-color": "#3751e5"
+        },
+        ":focus": {
+          "background-color": "#3751e5"
+        }
+      }
+    }
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "background-color": "#3d5afe",
+        ":hover": {
+          "background-color": "#3751e5"
+        },
+        ":focus": {
+          "background-color": "#3751e5"
+        }
+      },
+      "count": {
+        "color": "#ffffff",
+        ":hover": {
+          "color": "#ffffff"
+        }
+      },
+      "iconPath": {
+        "fill": "#ffffff"
+      }
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  }
+}
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
+
 	<script src="/assets/js/jquery-2.1.1.js"></script>
 	<script src="/assets/js/scripts.js"></script>
+<!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4624696.js"></script>
+<!-- End of HubSpot Embed Code -->
 </body>
 </html>

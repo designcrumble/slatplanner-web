@@ -58,7 +58,7 @@ header {
 		padding-top: 120px;
 		form {
 			padding-top: 0px; 
-			display: flex;
+			display: none;
 			align-items: center;
 			justify-content: center;
 			max-width: 500px;
@@ -98,6 +98,9 @@ header {
 						left: 105%;
 					}
 				}
+			}
+			@include respond-to('medium') {
+				display: flex;
 			}
 		}
 	}

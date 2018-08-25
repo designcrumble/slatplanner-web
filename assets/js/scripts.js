@@ -8,7 +8,7 @@ $(document).ready(function () {
 	  // sr.reveal('div', { container: footer, duration: 2000, scale: 1, distance: '30px' });
 	  // ds.reveal('div', { duration: 2000, scale: 1, distance: '30px' });
 	}
-			sr.reveal('section div', {duration: 1000, scale: 1, distance: '30px' });
+			sr.reveal('section div', {duration: 1000, scale: 1, distance: '30px', viewFactor: 0.05, });
 
 });
 
@@ -52,13 +52,13 @@ $(window).load(function () {
 	// 	tl.staggerFromTo(".blast", 0.15, {autoAlpha:0}, {autoAlpha:1},0.055);
 
 	var xd=new TimelineMax()
-	            .staggerFrom('header',0.35, {opacity:0, width:0, ease: Power1.easeOut}, 0.3)
-	            .staggerFrom('#hero',0.35, {opacity:0, height:0, ease: Power1.easeOut}, 0.3)
-	            .staggerFrom('nav',0.5, {opacity:0, y:20, ease: Back.easeInOut}, 0.3)
-	            .staggerFrom($headline,1, {opacity:0, y:20, ease: Back.easeInOut}, 0.5)
-	             .staggerTo($monogram,1, {opacity:1, y: -20, ease: Back.easeInOut}, 0.5)
-	            .staggerFrom($subHeader ,0.75, {opacity:0, y:20, ease: Back.easeInOut}, 0.5)
-	            .staggerFrom($heroActions,0.5, {opacity:0, y:20, ease: Back.easeInOut}, 0.5);
+	            .staggerFrom('header',0.35, {opacity:0, width:0, ease: Power1.easeOut}, 0.1)
+	            .staggerFrom('#hero',0.35, {opacity:0, height:0, ease: Power1.easeOut}, 0.1)
+	            .staggerFrom('nav',0.5, {opacity:0, y:20, ease: Back.easeInOut}, 0.1)
+	            .staggerFrom($headline,1, {opacity:0, y:20, ease: Back.easeInOut}, 0.3)
+	             .staggerTo($monogram,1, {opacity:1, y: -20, ease: Back.easeInOut}, 0.3)
+	            .staggerFrom($subHeader ,0.75, {opacity:0, y:20, ease: Back.easeInOut}, 0.3)
+	            .staggerFrom($heroActions,0.5, {opacity:0, y:20, ease: Back.easeInOut}, 0.3);
 	            // .staggerFrom($strike,1, {opacity:1, x: 50, ease: Back.easeInOut}, 0.5)
 	          
 	  // place this within dom ready function

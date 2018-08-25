@@ -76,7 +76,7 @@ a.cta {
 			color: $black;
 		}
 	}
-	&--dark {
+	&--dark, .shopify-buy__btn {
 		border: 1px solid $black;
 		position: relative;
 		display: inline-block;
