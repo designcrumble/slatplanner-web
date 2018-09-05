@@ -1,0 +1,77 @@
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+// usage
+// .foo {
+//   color: red;
+
+//  @include respond-to('medium') {
+//    color: blue;
+//  }
+// }
+
+// ----------- Responsive Breakpoint Manager End  ----------- //
+
+
+// Advanced positioning
+// --------------------
+@mixin position($type,
+                $top: $position-default,
+                $right: $position-default,
+                $bottom: $position-default,
+                $left: $position-default) {
+  position: $type;
+  $allowed_types: absolute relative fixed;
+  @if not index($allowed_types, $type) {
+    @warn "Unknown position: #{$type}.";
+  }
+  @each $data in top $top, right $right, bottom $bottom, left $left {
+    #{nth($data, 1)}: nth($data, 2);
+  }
+}
+@mixin absolute($top: $position-default, $right: $position-default, $bottom: $position-default, $left: $position-default) {
+  @include position(absolute, $top, $right, $bottom, $left);
+}
+@mixin relative($top: $position-default, $right: $position-default, $bottom: $position-default, $left: $position-default) {
+  @include position(relative, $top, $right, $bottom, $left);
+}
+@mixin fixed($top: $position-default, $right: $position-default, $bottom: $position-default, $left: $position-default) {
+  @include position(fixed, $top, $right, $bottom, $left);
+}
+
+
+// ----------- Typography transitions  ----------- //
+
+// Transitions - Usage: @include transition(all .2s ease);
+@mixin transition($args...) {
+    -webkit-transition: $args;
+       -moz-transition: $args;
+        -ms-transition: $args;
+         -o-transition: $args;
+            transition: $args;
+}
+
+@mixin soft-shadow() {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 5px 15px rgba(57, 71, 107, 0.15);
+}

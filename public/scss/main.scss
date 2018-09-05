@@ -1,0 +1,38 @@
+// ----------- Using the Sass 7-1 Architecture  ----------- //
+// More details : https://sass-guidelin.es/#the-7-1-pattern
+
+@import 'helpers/variables';
+@import 'helpers/functions';
+@import 'helpers/mixins';
+@import 'helpers/helpers';
+
+@import 'vendors/jquery-ui';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/forms';
+@import 'layout/hero';
+
+@import 'components/buttons';
+
+@import 'components/dropdown';
+@import 'components/navigation';
+@import 'components/animations';
+
+@import 'pages/home';
+@import 'pages/pricing';
+@import 'pages/about';
+@import 'pages/privacy';
+@import 'pages/request-demo';
+@import 'pages/resources';
+@import 'pages/thank-you';
+@import 'pages/why-slatplanner';
+@import 'pages/not-found';
+
+
+@import 'components/modals';

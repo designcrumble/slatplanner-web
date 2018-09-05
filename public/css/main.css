@@ -1365,20 +1365,20 @@ a {
     cursor: pointer;
     transition: all 0.2s ease; }
 
-a.cta {
+a.cta, input.cta {
   font-family: "Fjalla One", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: white;
   background: #3D5AFE;
   text-transform: uppercase;
   padding: 20px 40px; }
-  a.cta--primary {
+  a.cta--primary, input.cta--primary {
     border: 1px solid #3D5AFE;
     position: relative;
     display: inline-block;
     overflow: hidden;
     z-index: 2;
     overflow: hidden; }
-    a.cta--primary:after {
+    a.cta--primary:after, input.cta--primary:after {
       content: '';
       position: absolute;
       top: 0;
@@ -1389,13 +1389,13 @@ a.cta {
       transform: translateX(-98%);
       z-index: -1;
       transition: 0.5s ease-in-out; }
-    a.cta--primary:hover {
+    a.cta--primary:hover, input.cta--primary:hover {
       color: #FFFFFF;
       transition: all 0.2s ease; }
-      a.cta--primary:hover:after {
+      a.cta--primary:hover:after, input.cta--primary:hover:after {
         transform: translateX(0);
         transition: 0.5s ease-in-out; }
-  a.cta--secondary {
+  a.cta--secondary, input.cta--secondary {
     background: transparent;
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
@@ -1404,7 +1404,7 @@ a.cta {
     overflow: hidden;
     z-index: 2;
     overflow: hidden; }
-    a.cta--secondary:after {
+    a.cta--secondary:after, input.cta--secondary:after {
       content: '';
       position: absolute;
       top: 0;
@@ -1415,23 +1415,23 @@ a.cta {
       transform: translateX(-101%);
       z-index: -1;
       transition: 0.5s ease-in-out; }
-    a.cta--secondary:hover {
+    a.cta--secondary:hover, input.cta--secondary:hover {
       color: #00171F;
       transition: all 0.2s ease; }
-      a.cta--secondary:hover:after {
+      a.cta--secondary:hover:after, input.cta--secondary:hover:after {
         transform: translateX(0);
         transition: 0.5s ease-in-out; }
-    a.cta--secondary--inverse {
+    a.cta--secondary--inverse, input.cta--secondary--inverse {
       border-color: #00171F;
       color: #00171F; }
-  a.cta--dark, a.cta .shopify-buy__btn {
+  a.cta--dark, a.cta .shopify-buy__btn, input.cta--dark, input.cta .shopify-buy__btn {
     border: 1px solid #00171F;
     position: relative;
     display: inline-block;
     overflow: hidden;
     z-index: 2;
     overflow: hidden; }
-    a.cta--dark:after, a.cta .shopify-buy__btn:after {
+    a.cta--dark:after, a.cta .shopify-buy__btn:after, input.cta--dark:after, input.cta .shopify-buy__btn:after {
       content: '';
       position: absolute;
       top: 0;
@@ -1442,20 +1442,20 @@ a.cta {
       transform: translateX(-101%);
       z-index: -1;
       transition: 0.5s ease-in-out; }
-    a.cta--dark:hover, a.cta .shopify-buy__btn:hover {
+    a.cta--dark:hover, a.cta .shopify-buy__btn:hover, input.cta--dark:hover, input.cta .shopify-buy__btn:hover {
       color: #00171F;
       border-color: #FFFFFF;
       transition: all 0.2s ease; }
-      a.cta--dark:hover:after, a.cta .shopify-buy__btn:hover:after {
+      a.cta--dark:hover:after, a.cta .shopify-buy__btn:hover:after, input.cta--dark:hover:after, input.cta .shopify-buy__btn:hover:after {
         transform: translateX(0);
         transition: 0.5s ease-in-out; }
-  a.cta--features {
+  a.cta--features, input.cta--features {
     position: relative;
     display: inline-block;
     overflow: hidden;
     z-index: 2;
     overflow: hidden; }
-    a.cta--features:after {
+    a.cta--features:after, input.cta--features:after {
       content: '';
       position: absolute;
       top: 0;
@@ -1466,13 +1466,13 @@ a.cta {
       transform: translateX(-98%);
       z-index: -1;
       transition: 0.5s ease-in-out; }
-    a.cta--features:hover {
+    a.cta--features:hover, input.cta--features:hover {
       color: #FFFFFF;
       transition: all 0.2s ease; }
-      a.cta--features:hover:after {
+      a.cta--features:hover:after, input.cta--features:hover:after {
         transform: translateX(0);
         transition: 0.5s ease-in-out; }
-  a.cta--mobile {
+  a.cta--mobile, input.cta--mobile {
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -1483,9 +1483,9 @@ a.cta {
     line-height: normal;
     font-size: 20px;
     letter-spacing: 0.05em; }
-    a.cta--mobile--primary {
+    a.cta--mobile--primary, input.cta--mobile--primary {
       background: #3D5AFE; }
-    a.cta--mobile--secondary {
+    a.cta--mobile--secondary, input.cta--mobile--secondary {
       border-top: 1px solid rgba(255, 255, 255, 0.15); }
 
 .call-to-actions a {
@@ -2324,6 +2324,75 @@ section {
     .works--4 .note .title {
       color: #00171F; }
 
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden;
+  /* Hidden by default. Visible on click */
+  min-width: 250px;
+  /* Set a default minimum width */
+  margin-left: -125px;
+  /* Divide value of min-width by 2 */
+  background-color: #333;
+  /* Black background color */
+  color: #fff;
+  /* White text color */
+  text-align: center;
+  /* Centered text */
+  border-radius: 2px;
+  /* Rounded borders */
+  padding: 16px;
+  /* Padding */
+  position: fixed;
+  /* Sit on top of the screen */
+  z-index: 40;
+  /* Add a z-index if needed */
+  right: 5%;
+  /* Center the snackbar */
+  top: 120px;
+  /* 30px from the bottom */ }
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible;
+  /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+   However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    right: 0;
+    opacity: 0; }
+  to {
+    right: 120px;
+    opacity: 1; } }
+
+@keyframes fadein {
+  from {
+    right: 0;
+    opacity: 0; }
+  to {
+    right: 5%;
+    opacity: 1; } }
+
+@-webkit-keyframes fadeout {
+  from {
+    right: 5%;
+    opacity: 1; }
+  to {
+    right: 0;
+    opacity: 0; } }
+
+@keyframes fadeout {
+  from {
+    right: 5%;
+    opacity: 1; }
+  to {
+    right: 0;
+    opacity: 0; } }
+
 .actiions--pricing--mobile {
   display: block;
   margin-bottom: 60px; }
@@ -2882,6 +2951,121 @@ input:checked + .slider:before {
       .section--supplies .supply--secondary__metadata {
         padding: 0 40px; } }
 
+.thank-you__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07), 0px 15px 35px rgba(50, 50, 93, 0.1);
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 100px 0;
+  padding-top: 20px; }
+  .thank-you__container img {
+    margin: 40px 0; }
+  .thank-you__container p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.618;
+    margin: 20px 0;
+    margin-bottom: 40px; }
+  @media (min-width: 768px) {
+    .thank-you__container {
+      max-width: 70%; } }
+
+.section--thank-you {
+  margin-top: -400px;
+  z-index: 4;
+  position: relative; }
+
+.share-module-container {
+  background: white;
+  border-radius: 70px;
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  margin: 40px auto;
+  margin-bottom: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  .share-module-container .share-module {
+    margin-right: 10px;
+    box-shadow: 0px 3px 9px rgba(43, 174, 236, 0.5);
+    border-radius: 50%; }
+    .share-module-container .share-module img {
+      margin: 0; }
+    .share-module-container .share-module:last-of-type {
+      margin-right: 0; }
+    .share-module-container .share-module:hover {
+      transform: scale(1.1); }
+    .share-module-container .share-module--fb {
+      box-shadow: 0px 3px 9px rgba(59, 92, 154, 0.5); }
+    .share-module-container .share-module--tw {
+      box-shadow: 0px 3px 9px rgba(43, 174, 236, 0.5); }
+    .share-module-container .share-module--in {
+      box-shadow: 0px 3px 9px rgba(40, 148, 213, 0.5); }
+    .share-module-container .share-module--mail {
+      box-shadow: 0px 3px 9px rgba(2, 22, 34, 0.5); }
+  @media (min-width: 768px) {
+    .share-module-container {
+      width: 70%; } }
+
+.share-social {
+  background: #F5F6F8;
+  width: 80%;
+  padding: 40px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .share-social h3 {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000000;
+    opacity: 0.2; }
+
+form.copy-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  form.copy-link textarea {
+    border: 1px solid #EDEDED;
+    font-size: 14px;
+    height: 50px;
+    display: flex;
+    padding: 13px 10px;
+    flex-direction: row;
+    width: 100%; }
+  form.copy-link input {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center; }
+    form.copy-link input:focus {
+      background: #0a2ffe; }
+
+.blog-redirection {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 40px; }
+  .blog-redirection a {
+    margin-top: 20px; }
+  @media (min-width: 768px) {
+    .blog-redirection {
+      flex-direction: row; }
+      .blog-redirection a {
+        margin-left: 20px;
+        margin-top: 0px; } }
+
 .feature__card {
   display: flex;
   flex-direction: column;
@@ -2897,7 +3081,19 @@ input:checked + .slider:before {
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07), 0px 15px 35px rgba(50, 50, 93, 0.1); } }
 
 .feature__image {
-  margin-right: 50px; }
+  margin-right: 50px;
+  width: 300px;
+  margin: 30px auto; }
+  .feature__image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; }
+  @media (min-width: 768px) {
+    .feature__image {
+      width: 300px; } }
+  @media (min-width: 1200px) {
+    .feature__image {
+      width: 400px; } }
 
 .feature__meta h4 {
   margin-bottom: 15px; }

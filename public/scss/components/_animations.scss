@@ -1,0 +1,52 @@
+.anim-up-down {
+  animation: MoveUpDown 8s ease-in-out infinite;
+  @include respond-to('medium') {
+    animation: MoveUpDownDesktop 8s ease-in-out infinite;
+  }
+  &--tablet {
+    animation: MoveUpDownTablet 4s ease-in-out infinite;
+  }
+  &--laptop {
+    animation: MoveUpDownLaptop 6s ease-in-out infinite;
+  }
+}
+
+@keyframes MoveUpDownDesktop {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes MoveUpDownTablet {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes MoveUpDownLaptop {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.x {
+  animation: slide_up 600ms ease 100ms 1 normal forwards running;
+}

@@ -102,7 +102,7 @@ mixpanel.init("cd7728789971534c2317ee8a8c11cf6f");</script><!-- end Mixpanel -->
 							<div class="supply__metadata">
 								<h3 class="title">Sticker Sheets</h3>
 								<p class="p3">These printable stickers apply to the SlatNotes and are removable</p>
-								<a href="#" class="cta cta--secondary cta--dark">BUY NOW</a>
+								<div id='product-component-c51ef7a3ef1'></div>
 							</div>
 						</div>
 					</div>
@@ -351,7 +351,170 @@ mixpanel.init("cd7728789971534c2317ee8a8c11cf6f");</script><!-- end Mixpanel -->
 })();
 /*]]>*/
 </script>
+<script type="text/javascript">
+/*<![CDATA[*/
 
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'slatplanner.myshopify.com',
+      storefrontAccessToken: '0f265ee7b343d8a4b3adb2e58e8c25e2',
+    });
+
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: [1390154612848],
+        node: document.getElementById('product-component-c51ef7a3ef1'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+  "product": {
+    "buttonDestination": "checkout",
+    "variantId": "all",
+    "width": "240px",
+    "contents": {
+      "img": false,
+      "imgWithCarousel": false,
+      "title": false,
+      "variantTitle": false,
+      "price": false,
+      "description": false,
+      "buttonWithQuantity": false,
+      "quantity": false
+    },
+    "text": {
+      "button": "BUY NOW"
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      },
+      "button": {
+        "background-color": "#3d5afe",
+        "font-family": "Arial, sans-serif",
+        ":hover": {
+          "background-color": "#3751e5"
+        },
+        ":focus": {
+          "background-color": "#3751e5"
+        },
+        "font-weight": "normal"
+      }
+    }
+  },
+  "cart": {
+    "contents": {
+      "button": true
+    },
+    "styles": {
+      "button": {
+        "background-color": "#3d5afe",
+        "font-family": "Arial, sans-serif",
+        ":hover": {
+          "background-color": "#3751e5"
+        },
+        ":focus": {
+          "background-color": "#3751e5"
+        },
+        "font-weight": "normal"
+      },
+      "footer": {
+        "background-color": "#ffffff"
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "variantTitle": false,
+      "buttonWithQuantity": true,
+      "button": false,
+      "quantity": false
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "background-color": "#3d5afe",
+        "font-family": "Arial, sans-serif",
+        ":hover": {
+          "background-color": "#3751e5"
+        },
+        ":focus": {
+          "background-color": "#3751e5"
+        },
+        "font-weight": "normal"
+      }
+    }
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "font-family": "Arial, sans-serif",
+        "background-color": "#3d5afe",
+        ":hover": {
+          "background-color": "#3751e5"
+        },
+        ":focus": {
+          "background-color": "#3751e5"
+        },
+        "font-weight": "normal"
+      },
+      "count": {
+        "color": "#ffffff",
+        ":hover": {
+          "color": "#ffffff"
+        }
+      },
+      "iconPath": {
+        "fill": "#ffffff"
+      }
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  }
+}
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
 	<script src="/assets/js/jquery-2.1.1.js"></script>
 	<script src="/assets/js/scripts.js"></script>
 <!-- Start of HubSpot Embed Code -->

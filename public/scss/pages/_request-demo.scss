@@ -1,0 +1,127 @@
+
+.hbspt-form {
+	background: $white;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07), 0px 15px 35px rgba(50, 50, 93, 0.1);
+	border-top: 10px solid $brand-primary;
+	max-width: 95%; 
+	margin: 0 auto;
+	padding: 60px;
+	position: absolute;
+	z-index: 5;
+	top: 450px;
+	left: 0;
+	right: 0;
+	label {
+		color: $black;
+		margin-bottom: 10px;
+	}
+	input {
+		background: #F6F9FC;
+		border-radius: 2px;
+		&:focus {
+			border-color: $brand-primary;
+		}
+	}
+	input.hs-input.error, div.field.error input, div.field.error textarea, div.field.error .chzn-choices, textarea.hs-input.error {
+		border-color: $error-color !important;
+	}
+	.hs-input {
+		background: #F6F9FC;
+	}
+	@include respond-to('medium') {
+		max-width: 600px; 
+	}
+}
+
+/* Inputs in focus (selectors for all inputs when clicked)  */
+.hs-form input[type="text"]:focus,
+.hs-form input[type="password"]:focus, 
+.hs-form input[type="datetime"]:focus, 
+.hs-form input[type="datetime-local"]:focus, 
+.hs-form input[type="date"]:focus, 
+.hs-form input[type="month"]:focus, 
+.hs-form input[type="time"]:focus, 
+.hs-form input[type="week"]:focus, 
+.hs-form input[type="number"]:focus, 
+.hs-form input[type="email"]:focus, 
+.hs-form input[type="url"]:focus, 
+.hs-form input[type="search"]:focus, 
+.hs-form input[type="tel"]:focus, 
+.hs-form input[type="color"]:focus,
+.hs-form input[type="file"]:focus,
+.hs-form textarea:focus,
+.hs-form select:focus {
+	outline: none;
+	border-color: $brand-primary !important;
+	background: 0;
+	background-color: white;
+}
+
+.hs-input:focus {
+    outline: none;
+	border-color: $brand-primary !important;
+	background: 0 !important;
+	background-color: white !important;
+}
+
+.hs-button {
+	background-color: $brand-primary !important;
+	border-color: $brand-primary !important;
+	border: 1px solid $brand-primary !important;
+	position: relative !important;
+	display: inline-block !important;
+	overflow: hidden !important;
+	z-index: 2 !important;
+	overflow: hidden !important;
+	&:after {
+		content: '';
+		@include absolute(0,0,0,0);
+		background-color: $black;
+		transform: translateX(-98%);
+		z-index: -1;
+		transition: 0.5s ease-in-out;
+		}
+		&:hover {
+		color: $white;
+		transition: all 0.2s ease;
+		&:after {
+		  transform: translateX(0);
+		 transition: 0.5s ease-in-out;
+		}
+	}
+}
+
+.questions {
+	display: flex;
+	align-items: center;
+	border: 1px solid rgba($black, 0.1);
+	border-radius: 2px;
+	padding: 30px 20px;
+	.icon {
+		margin-right: 30px;
+	}
+	h3 {
+		text-align: left;
+		margin-bottom: 5px;
+	}
+	p {
+		text-align: left;
+		a {
+			font-family: $font-family;
+			display: inline;
+			text-transform: lowercase;
+			color: $brand-primary;
+		}
+	}
+}
+
+.section--request-demo-contact {
+	padding-top: 140px;
+	padding-bottom: 00px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	@include respond-to('medium') {
+		padding: 100px 0;
+	}
+}

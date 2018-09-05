@@ -1,0 +1,121 @@
+
+#about{
+}
+
+.section--team {
+	overflow-x: hidden;
+	position: relative;
+	&:after {
+		content: '';
+		display: block;
+		background: linear-gradient(0deg, #F6F9FC, #F6F9FC), linear-gradient(103.77deg, #E3E5FF 2.14%, #EFF9FF 97.38%);
+		transform: skewY(-12deg);
+		transform-origin: 0;
+		position: absolute;
+		z-index: -1;
+		top: 25%;
+		height: 60%;
+		left: 0%;
+		width: 140%;
+		overflow: hidden;
+		max-width: 100%;
+	}
+	h2 {
+		padding-bottom: 20px;
+		border-bottom: 1px solid rgba($black, 0.15);
+		margin-bottom: 60px;
+	}
+	@include respond-to('medium') {
+		&:after {
+			top: 25%;
+			height: 60%;
+		}
+		h2 {
+			padding-bottom: 40px;
+		}
+	}
+	@include respond-to('huge') {
+		&:after {
+			top:35%;
+			height: 60%;
+		}
+		h2 {
+			padding-bottom: 40px;
+		}
+	}
+}
+#about {
+}
+.section--cta {
+	a {
+		color: $white;
+		background: $black;
+		border-color: $black;
+		letter-spacing: 0.02em;
+	} 
+}
+.player {
+	margin-bottom: 40px;
+	.player-body {
+		position: relative;
+		.profile {
+			max-height: 460px;
+			overflow: hidden;
+			width: 170px;
+			img {
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+			}
+			@include respond-to('medium') {
+				width: 350px;
+			}
+		}
+
+	}
+	.metadata {
+		width: 90%;
+		padding: 15px;
+		background: white;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		top: -28px;
+		left: 10px;
+		box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.05);
+		.name {
+			font-family: $header-fonts;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			text-transform: uppercase;
+			letter-spacing: 0.01em;
+			margin-bottom: 5px;
+		}
+		.role {
+			font-weight: normal;
+			font-size: 12px;
+			color: #000000;
+			opacity: 0.7;
+		}
+	}
+	@include respond-to('medium') {
+		.metadata {
+			width: 80%;
+			top: -60px;
+			left: 20px;
+			padding: 15px 20px;
+			.name {
+				line-height: 38px;
+				font-size: 24px;
+				color: #000000;
+				margin-bottom: 10px;
+			}
+			.role {
+				font-size: 14px;
+				color: #000000;
+				opacity: 0.7;
+			}
+		}
+	}
+}

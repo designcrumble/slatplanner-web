@@ -1,0 +1,64 @@
+
+// ----------- Variable Rules  ----------- //
+
+// use !default to definte any variable so that anyonce can overwrite it. 
+// $baseline: 1em !default;
+// // Developer’s own variable
+// $baseline: 2em;
+
+// Your library declaring `$baseline`
+// @import 'your-library';
+
+// $baseline == 2em;
+
+
+// ----------- Breakpoints  ----------- //
+
+// breakpoint variables : you can add more as necessary
+// we'll go mobile first as much as possible.
+
+$breakpoints: (
+  'small': (min-width: 480px),
+  'medium': (min-width: 768px),
+  'large': (min-width: 1024px),
+  'huge': (min-width: 1200px),
+  'x-huge': (min-width: 1440px),
+  'largest': (min-width: 1920px),
+);
+
+
+/*------------------------------------*\
+    #UTILS - Color Variables
+\*------------------------------------*/
+
+$brand-primary: #3D5AFE;
+$brand-primary--light: #5972FF;
+$brand-primary--dark: #0031CA;
+
+$white: #FFFFFF;
+
+$black: #00171F;
+$black--light: #2F3C40;
+$black--dark: #001319;
+
+$slat-blue: #00A7E1;
+$marigold: #FAA916;
+
+// $nav-bg: #030c1a;
+$red: #FC5356;
+
+
+$text-primary: $black;
+$text-secondary: #8A93A4;
+$text-tertiary: #B9BEC8;
+
+$error-color: $red;
+
+
+
+$primary-color: 				$brand-primary;
+$header-font-color:				$text-primary;
+$body-font-color: 				$text-secondary;
+
+// $primary-gradient:  linear-gradient(295.37deg, #0286FF -33.37%, #03D9C9 100%);
+// $secondary-gradient:  linear-gradient(-100deg, #03D8C9 0%, #5753FE 97%);

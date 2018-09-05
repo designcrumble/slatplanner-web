@@ -1,0 +1,107 @@
+header {
+	height: 80%;
+	min-height: 700px;
+	width: 100%;
+	background: $black;
+	background: linear-gradient(278.6deg, #00171F 12.39%, #180040 100%);
+	max-width: 100%;
+	overflow: hidden;
+	overflow-x: hidden;
+}
+
+.header {
+	&--main {
+		min-height: 850px;
+	}
+	&--sub-page {
+		height: 640px;
+		padding-top: 100px;
+	}
+	&--sub-page {
+		background: linear-gradient(278.6deg, #00171F 12.39%, #180040 100%);
+		transform: skewY(-8deg);
+		transform-origin: 0;
+		.container {
+			transform: skewY(8deg);
+			transform-origin: 0;
+		}
+		#hero {
+			background: none;
+			&:after {
+				content: '';
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				z-index: -1;
+				bottom: -0px;
+				transform: skewY(5deg);
+				transform-origin: 0;
+				right: 0px;
+				overflow: hidden;
+				background: url('/assets/img/header--sub-bg.png') no-repeat;
+				background-position: bottom right;
+				background-size: cover;
+			}
+		}
+	}
+}
+
+.header--sub {
+	h1,p, label {
+		 margin: 0 auto;
+		 color: white;
+	}
+	h1 {
+		margin-bottom: 20px;
+	}
+	.hero {
+		padding-top: 120px;
+		form {
+			padding-top: 0px; 
+			display: none;
+			align-items: center;
+			justify-content: center;
+			max-width: 500px;
+			margin: 0 auto;
+			label {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				font-family: $header-fonts;
+				line-height: normal;
+				font-size: 16px;
+				letter-spacing: 0.02em;
+				text-transform: uppercase;
+				color: #FFFFFF;
+				position: relative;
+				.price-active {
+					color: $brand-primary;
+				}
+				span.discount {
+					position: absolute;
+					top: 110%;
+					width: 100px;
+					margin-top: 10px;
+					display: inline-block;
+					font-family: $font-family;
+					font-weight: 900;
+					background: $marigold;
+					color: white;
+					padding: 5px 10px;
+					font-size: 12px;
+					border-radius: 50px;
+					@include respond-to('medium') {
+						top: initial;
+						margin-left: 10px;
+						margin-top: 0px;
+						left: 105%;
+					}
+				}
+			}
+			@include respond-to('medium') {
+				display: flex;
+			}
+		}
+	}
+}
