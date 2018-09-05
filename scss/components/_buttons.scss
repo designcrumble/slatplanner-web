@@ -16,7 +16,7 @@ a {
 		transition: all 0.2s ease;
 	}
 }
-a.cta {
+a.cta, input.cta {
 	font-family: $header-fonts;
 	color: white;
 	background: $brand-primary;

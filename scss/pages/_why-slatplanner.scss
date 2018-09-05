@@ -16,6 +16,19 @@
 	}
 	&__image {
 		margin-right: 50px;
+		width: 300px;
+		margin: 30px auto;
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+		@include respond-to('medium') {
+			width: 300px;
+		}
+		@include respond-to('huge') {
+			width: 400px;
+		}
 	}
 	&__meta {
 		h4 {
@@ -63,5 +76,4 @@
 			}
 		}
 	}
-
 }
