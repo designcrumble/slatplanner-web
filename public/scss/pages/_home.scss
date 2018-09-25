@@ -286,6 +286,7 @@ section {
 				justify-content: center;
 				padding: 0;
 				margin: 0;
+
 				&:nth-of-type(even) {
 					.note {
 						margin: 0;
@@ -308,6 +309,13 @@ section {
 					max-height: initial;
 					.content {
 						padding: 40px 20px;
+						h4 {
+							font-size: 32px !important;
+						}
+						p {
+							font-size: 16px !important;
+							margin-bottom: 20px !important;
+						}
 					}
 					@include soft-shadow;
 					&:nth-of-type(even) {
@@ -655,7 +663,7 @@ section {
 		.content {
 			display: flex;
 			flex-direction: column;
-			padding: 80px 50px;
+			padding: 60px 40px;
 		}
 		.banner {
 			display: block;
@@ -665,10 +673,11 @@ section {
 			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 5px 15px rgba(57, 71, 107, 0.15);
 		}
 		.title {
-
+			font-size: 32px;
 		}
-		.p3 {
+		.p2 {
 			margin-bottom: 40px;
+			line-height: 1.7;
 		}
 		a {
 			border-color: $black;
