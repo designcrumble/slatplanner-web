@@ -83,6 +83,8 @@ a.cta, input.cta {
 		overflow: hidden;
 		z-index: 2;
 		overflow: hidden;
+		min-width: 200px;
+		text-align: center;
 		&:after {
 			content: '';
 			@include absolute(0,0,0,0);
