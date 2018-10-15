@@ -1137,7 +1137,7 @@ header {
       width: 100%;
       position: absolute;
       z-index: -1;
-      bottom: -0px;
+      bottom: -10%;
       transform: skewY(5deg);
       transform-origin: 0;
       right: 0px;
@@ -1145,6 +1145,18 @@ header {
       background: url("/assets/img/header--sub-bg.png") no-repeat;
       background-position: bottom right;
       background-size: cover; }
+    @media (min-width: 768px) {
+      .header--sub-page #hero:after {
+        bottom: -45px; } }
+    @media (min-width: 1200px) {
+      .header--sub-page #hero:after {
+        bottom: -30px; } }
+    @media (min-width: 1440px) {
+      .header--sub-page #hero:after {
+        bottom: -32px; } }
+    @media (min-width: 1920px) {
+      .header--sub-page #hero:after {
+        bottom: -15px; } }
 
 .header--sub h1, .header--sub p, .header--sub label {
   margin: 0 auto;
@@ -1176,25 +1188,6 @@ header {
       position: relative; }
       .header--sub .hero form label .price-active {
         color: #3D5AFE; }
-      .header--sub .hero form label span.discount {
-        position: absolute;
-        top: 110%;
-        width: 100px;
-        margin-top: 10px;
-        display: inline-block;
-        font-family: "Poppins", Playfair Display, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        font-weight: 900;
-        background: #FAA916;
-        color: white;
-        padding: 5px 10px;
-        font-size: 12px;
-        border-radius: 50px; }
-        @media (min-width: 768px) {
-          .header--sub .hero form label span.discount {
-            top: initial;
-            margin-left: 10px;
-            margin-top: 0px;
-            left: 105%; } }
     @media (min-width: 768px) {
       .header--sub .hero form {
         display: flex; } }
@@ -2455,6 +2448,23 @@ section {
 
 .pricing-cards {
   padding-bottom: 100px; }
+  .pricing-cards span.discount {
+    width: 100px;
+    margin-top: 10px;
+    display: inline-block;
+    font-family: "Poppins", Playfair Display, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 900;
+    background: #FAA916;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 50px; }
+    @media (min-width: 768px) {
+      .pricing-cards span.discount {
+        top: initial;
+        margin-left: 10px;
+        margin-top: 0px;
+        left: 105%; } }
 
 .schedule-demo--cta h2 {
   margin-bottom: 20px; }
@@ -2529,22 +2539,14 @@ section {
       letter-spacing: 0.02em;
       text-transform: uppercase;
       color: #00171F;
-      margin: 40px auto; }
+      margin: 40px 10px; }
     .pricing-card .fee .billing-period {
-      position: absolute;
-      right: -18%;
-      width: 100%;
-      height: 100%;
-      top: 50%;
       z-index: 4;
       font-weight: bold;
       line-height: normal;
       font-size: 16px;
       color: #000000;
       opacity: 0.2; }
-      @media (min-width: 768px) {
-        .pricing-card .fee .billing-period {
-          right: -12%; } }
   .pricing-card ul.features {
     display: flex;
     flex-direction: column;

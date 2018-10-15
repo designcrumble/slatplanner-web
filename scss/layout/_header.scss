@@ -33,7 +33,7 @@ header {
 				width: 100%;
 				position: absolute;
 				z-index: -1;
-				bottom: -0px;
+				bottom: -10%;
 				transform: skewY(5deg);
 				transform-origin: 0;
 				right: 0px;
@@ -41,6 +41,26 @@ header {
 				background: url('/assets/img/header--sub-bg.png') no-repeat;
 				background-position: bottom right;
 				background-size: cover;
+			}
+			@include respond-to('medium') {
+				&:after {
+					bottom: -45px;
+				}
+			}
+			@include respond-to('huge') {
+				&:after {
+					bottom: -30px;
+				}
+			}
+			@include respond-to('x-huge') {
+				&:after {
+					bottom: -32px;
+				}
+			}
+			@include respond-to('largest') {
+				&:after {
+					bottom: -15px;
+				}
 			}
 		}
 	}
@@ -77,26 +97,6 @@ header {
 				position: relative;
 				.price-active {
 					color: $brand-primary;
-				}
-				span.discount {
-					position: absolute;
-					top: 110%;
-					width: 100px;
-					margin-top: 10px;
-					display: inline-block;
-					font-family: $font-family;
-					font-weight: 900;
-					background: $marigold;
-					color: white;
-					padding: 5px 10px;
-					font-size: 12px;
-					border-radius: 50px;
-					@include respond-to('medium') {
-						top: initial;
-						margin-left: 10px;
-						margin-top: 0px;
-						left: 105%;
-					}
 				}
 			}
 			@include respond-to('medium') {
