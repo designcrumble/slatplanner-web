@@ -2890,6 +2890,9 @@ input:checked + .slider:before {
       transform: translateX(0);
       transition: 0.5s ease-in-out; }
 
+.hubspot-form--signup {
+  min-height: 1000px; }
+
 .questions {
   display: flex;
   align-items: center;

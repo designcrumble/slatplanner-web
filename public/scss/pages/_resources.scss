@@ -2,6 +2,12 @@
 	.supply {
 		margin: 80px 0;
 		position: relative;
+		&__image {
+			img {
+				width: 100%;
+				object-fit: cover;	
+			}
+		}
 		&__metadata {
 			background: white;
 			position: absolute;
@@ -53,4 +59,8 @@
 			}
 		}
 	}
+}
+
+.shopify-buy-frame--product {
+	margin-left: -43px !important; 
 }

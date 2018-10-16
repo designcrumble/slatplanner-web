@@ -243,6 +243,7 @@ section {
 				border-color: $marigold;
 				justify-content: center;
 				color: $black;
+				min-width: 200px;
 				&:after {
 					transform: translateX(-101%);
 				}
@@ -444,6 +445,7 @@ section {
 				width: 100%;
 				background: $black;
 				border: 1px solid $black;
+
 				&:hover {
 					border-color: $white;
 				}
@@ -614,6 +616,8 @@ section {
 			color: $black;
 			background: $white;
 			border-color: $white;
+			min-width: 200px;
+			text-align: center;
 			
 		}
 		@include respond-to('medium') {
